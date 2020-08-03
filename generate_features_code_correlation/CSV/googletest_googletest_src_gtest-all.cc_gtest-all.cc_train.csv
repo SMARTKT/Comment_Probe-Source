@@ -1,0 +1,36 @@
+"googletest/googletest/src/gtest-all.cc/gtest-all.cc","Copyright 2008, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+* Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",88.94999999999999,18.05,0.05,16.21,10.490000000000002,1.25,0.05,0.05,0.41,0.05,0.05,10.05,1.0,1.0,1.0,0.9866142981514303,0.0,0.46211715726000974,0.9051482536448664,1,0.0
+"googletest/googletest/src/gtest-all.cc/gtest-all.cc","
+Google C++ Testing and Mocking Framework (Google Test)
+
+Sometimes it's desirable to build Google Test by compiling a single file.
+This file serves this purpose.",12.65,0.05,0.05,1.5700000000000003,2.0300000000000002,0.05,0.05,0.05,0.41,10.05,0.05,0.05,0.46211715726000974,0.9866142981514303,0.6640367702678491,0.46211715726000974,0.46211715726000974,0.0,0.9999999999986171,2,0.0
+"googletest/googletest/src/gtest-all.cc/gtest-all.cc","This line ensures that gtest.h can be compiled on its own, even
+when it's fused.",4.949999999999999,0.05,0.05,0.8500000000000001,1.85,0.05,0.05,0.05,0.41,0.05,0.05,0.05,0.0,0.9866142981514303,0.0,0.0,0.0,0.0,0.0,2,0.5
+"googletest/googletest/src/gtest-all.cc/gtest-all.cc","The following lines pull in the real gtest *.cc files.",4.949999999999999,0.05,0.05,0.7700000000000001,0.23000000000000004,0.05,0.05,0.05,0.41,0.05,0.05,0.05,0.0,0.7615941559557649,0.7615941559557649,0.0,0.0,0.0,0.0,2,0.0
