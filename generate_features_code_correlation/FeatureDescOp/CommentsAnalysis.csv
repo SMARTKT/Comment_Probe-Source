@@ -1,0 +1,700 @@
+COMMENT,Op/Desc,Metdata
+"Written by Joseph O'Rourke.
+   Graham's algorithm for hull of 2-dim points.
+   See ""Computational Geometry in C.""","d, d, d",
+Dimension of points,d,root: dimension(NNP)
+type integer point,d,root: type(NN)
+type double point,d,root: type(NN)
+Max # of pts in polygon,d,root: Max (NNP)
+type integer polygon,d,root: type(NN)
+----------from tri.c-------------,d,root: from(PP)
+----------from tri.c-------------,d,root: from(PP)
+global so compare can access it.,d,
+base: pointer to 1st elem,d,
+count: # of elems,d,
+size of each elem,d,
+"-1,0,+1 compare fnc",d,
+"FindLowest finds the rightmost lowest point and swaps with 0-th.
+        The lowest point has the min y-coord, and amongst those, the
+        max x-coord: so it is rightmost among the lowest.","o, d",
+Index of lowest so far.,d,root: Index(NNP)
+To hold point when swapping.,o,
+swap,o/d,root: swap(NN)
+"Compare: returns -1,0,+1 if p1 < p2, =, or > respectively;
+        here ""<"" means smaller angle.  Follows the conventions of qsort.","o, d",
+area,d,
+ri = pi - p0,d,
+length of r1 & r2,d,
+"Get a cell, fill it with i, and push it onto the stack.
+        Return pointer to stack top.",o,
+Performs the Graham scan on an array of angularly sorted points P.,o,
+"Initialize stack to (P[n-1], P[0]).",o,
+Bottom two elements will never be removed.,o,
+"P[n-1] pushed twice, so pop it off.",o,
+"inpoly.c
+	Written by Joseph O'Rourke
+	orourke@sophia.smith.edu",d,
+Dimension of points,d,
+type integer point,d,
+type double point,d,
+Max # of pts in polygon,d,
+type integer polygon,d,
+Last point is the point q,d,
+Returns true if q is inside polygon P.,o,
+point index; i1 = i-1 mod n,"d, d",
+dimension index,d,
+x intersection of e with ray,d,
+number of edge/ray crossings,d,
+Shift so that q is the origin.,o,
+"For each edge e=(i-1,i), see if crosses ray.",o,
+if e straddles the x-axis...,o/d,
+"e straddles ray, so compute intersection with ray.",o,
+crosses ray if strictly positive intersection.,,
+q inside if an odd number of crossings.,,
+"Reads in the coordinates of the vertices of a polygon from stdin,
+        puts them into P, and returns n, the number of vertices.
+        Formatting conventions: etc.","o, o, o, d",
+"arm.c
+        Prints out one arm configuration to reach given target.
+        Assumes number of links >= 3.","d, o, d",
+Dimension of points,d,
+type integer point,d,
+type double point,d,
+link lengths,d,
+number of links,d,
+target point,d,
+index of median link,d,
+length of links between kinks,d,
+total length of all links,d,
+floor of half of total,d,
+Compute total & half length.,o,root: Compute(verb)
+Find median link.,o,
+coords of kinked joint returned by Solve2,d,
+Joint1 on x-axis,d,
+translated target,d,
+pin J0 to 0.,o,
+Shift so J1 is origin.,o,
+Shift solution back to origin.,o,
+center of circle 1,d,
+"# of solns: 0,1,2,3(infinite)","d, d",
+"TwoCircles finds the intersection points between two circles.
+        This is the general routine, no assumptions.
+        One intersection point is placed in p.","d, d, o",
+"TwoCircles0a assumes that the first circle is centered 
+        on the origin.  It handles all the special cases, returning
+        the number of intersection points: 0, 1, 2, 3 (inf).","d, d/o",
+dist to center 2 squared,o,
+(r1 +/- r2)^2,d,
+fraction along c2 for nsoln=1,d,
+Handle special cases.,o,
+No solution if c2 out of reach + or -.,d,
+One solution if c2 just reached.,d,
+Then solution is r1-of-the-way (f) to c2.,d,
+Circles coincide.,d,
+Two intersections.,d,
+"TwoCircles0b also assumes that the first circle is centered       
+        on the origin.  It rotates c2 to lie on the x-axis.","d, o",
+center of 2nd circle when rotated to x-axis,,
+one solution when c2 on x-axis,,
+sine and cosine of angle of c2,,
+Rotate c2 to a2 on x-axis.,,
+Rotate back,,
+"TwoCircles00 assume circle one is origin-centered, and
+        that the center of the second circle is at (a2,0).",,
+Two intersections (only one returned in p).,,
+Dimension of points,,
+type integer point,,
+type double point,,
+Max # of pts in polygon,,
+type integer polygon,,
+"P has n vertices, Q has m vertices.",,
+indices on P and Q (resp.),,
+"a-1, b-1 (resp.)",,
+directed edges on P and Q (resp.),,
+A x B,,
+b in H(A); a in H(b).,,
+"(0,0)",,
+double point of intersection,,
+"{Pin, Qin, Unknown}:
+                                   which polygon is known to be inside",,
+loop counter,,
+"# advances on a & b indices 
+				   (from first intersection)",,
+have the advance counters ever been reset,,
+Initialize variables.,,
+Computations of key variables.,,
+"If A & B intersect, update inflag.",,
+Advance rules.,,
+if ( cross < 0 ),,
+"Quit when both adv. indices have cycled, or one has cycled twice.",,
+Deal with special cases: not implemented here.,,
+"Prints out the double point of intersection, and toggles
+	in/out flag.",,
+Update inflag.,,
+Advances and prints out an inside vertex if appropriate.,,
+The two parameters of the parametric eqns.,,
+Denoninator of solutions.,,
+"If denom is zero, then the line segments are parallel.",,
+"In this case, return false even though the segments might overlap.",,
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.",,
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.",,
+"Returns true iff c is strictly to the left of the directed
+	line through a to b.",,
+Puts a - b into c.,,
+"Returns twice the signed area of the triangle determined by a,b,c,
+        positive if a,b,c are oriented ccw, and negative if cw.",,
+"Written by Joseph O'Rourke.
+   Last modified February 17, 1991.
+   Code to triangulate a simple polygon.
+   Quadratic algorithm.
+   See ""Computational Geometry in C.""",,
+Dimension of points,,
+type integer point,,
+type double point,,
+Max # of pts in polygon,,
+type integer polygon,,
+"Returns twice the signed area of the triangle determined by a,b,c.
+        The area is positive if a,b,c are oriented ccw, negative if cw,
+	and zero if the points are collinear.",,
+Returns twice the area of polygon P.,,
+Partial area sum,,
+"Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise xor operator may apply.
+	(This idea is due to Michael Baldwin.)",,
+"Returns true iff ab properly intersects cd: they share
+	a point interior to both segments.  The properness of the
+	intersection is ensured by using strict leftness.",,
+"Returns true iff c is strictly to the left of the directed
+	line through a to b.",,
+Puts a - b into c.,,
+Returns the dot product of the two input vectors.,,
+Returns the square of the length of the vector p.,,
+"Returns T iff point c lies on the closed segement ab.
+        First checks that c is collinear with a and b.",,
+"Returns true iff segments ab and cd intersect,
+        properly or improperly.",,
+"Returns T iff (v_i, v_j) is a proper internal *or* external
+	diagonal of P, *ignoring edges incident to v_i and v_j*.",,
+"For each edge (k,k+1) of P",,
+Skip edges incident to i or j,,
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.",,
+"PrintPoly( n, P, labels );",,
+"Prints out n-3 diagonals (as pairs of integer indices)
+	which form a triangulation of P.
+	This function initializes the data structures, and calls
+	Triangulate2 to clip off the ears one by one.",,
+"Ear[i] true iff (i,i+1,i+2) is an ear",,
+Copy points into temporary array & initialize labels.,,
+"Ear[i] is true iff (i,i+1,i+2) is an ear.",,
+Initialize Ear[] for all i.,,
+"Triangulate2 is an O(n^2) triangulation function
+	(or it would be if the array squashing were replaced by
+	pointer movements).
+	Assumes all arrays (including Ear) have been initialized.",,
+"i-1,i,i+1,i+2,i+3",,
+Each step of outer loop removes one ear.,,
+Inner loop searches for an ear.,,
+Ear found.,,
+"(i,i+2) is a diagonal",,
+"Replace the two entries for segments
+				   incident to i+1:
+				   (i-1,i+1) ==> (i-1,i+2)
+				   (i+1,i+3) ==> (i,i+3)",,
+Squash out the i1 entry in all arrays,,
+out of inner loop,,
+"Returns true iff the diagonal (i,j) is striclty internal to the 
+	polygon P in the neighborhood of the i endpoint.",,
+i + 1,,
+i - 1,,
+"If P[i] is a convex vertex [ i+1 left of (i-1,i) ].",,
+"Assume (i-1,i,i+1) not collinear.",,
+else P[i] is reflex.,,
+"Returns T iff (v_i, v_j) is a proper internal
+	diagonal of P.",,
+Removes P[i] by copying P[i+1]...P[n-1] left one index.,,
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.",,
+"Returns twice the signed area of the triangle determined by a,b,c.
+        The area is positive if a,b,c are oriented ccw, negative if cw,
+	and zero if the points are collinear.",,
+"Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise xor operator may apply.
+	(This idea is due to Michael Baldwin.)",,
+Puts a - b into c.,,
+Returns the dot product of the two input vectors.,,
+Returns the square of the length of the vector p.,,
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.",,
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.",,
+"extreme.c
+	Written by Joseph O'Rourke
+	orourke@cs.smith.edu",,
+Dimension of points,,
+type integer point,,
+type double point,,
+Max # of pts in polygon,,
+type integer polygon,,
+"Returns index midway ccw from a to b, mod n.",,
+Returns index of a point extreme in direction u.,,
+"[a,b] includes extreme; a1=a+1.",,
+index midway; c1 is c +- 1.,,
+"edge vectors after a, after c, before c.",,
+dots with u.,,
+height difference: P[a] - P[c] in dir. u.,,
+u rotated cw by pi/2,,
+Compute basic vectors and dots.,,
+Termination conditions,,
+"If either A or C points left of u, then at extreme.",,
+"From here on, can assume that zero dots put point on bot",,
+Halving interval,,
+"new: (a,c)",,
+"new: (c,b)",,
+"new: (a,c)",,
+"new: (c,b)",,
+"new: (a,c)",,
+"new: (c,b)",,
+Puts a - b into c.,,
+Returns the dot product of the two input vectors.,,
+"printf(""Dot: a, b =\n"");
+	PrintPoint(a); putchar('\n');
+	PrintPoint(b); putchar('\n');",,
+"printf(""before: i=%d, sum=%d, a[i]=%d, b[i]=%d\n"", 
+			i, sum, a[i], b[i]);",,
+"printf(""after: i=%d, sum=%d, a[i]=%d, b[i]=%d\n"", 
+			i, sum, a[i], b[i]);",,
+"printf(""Dot: returning %d\n"", sum);",,
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.",,
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.",,
+"input points xy,z=x^2+y^2",,
+number of input points,,
+indices of four points,,
+"outward vector normal to (i,j,k)",,
+"t if m above of (i,j,k)",,
+Input points and compute z = x^2 + y^2.,,
+"For each triple (i,j,k)",,
+"Compute normal to triangle (i,j,k).",,
+Only examine faces on bottom of paraboloid: zn < 0.,,
+For each other point m,,
+"Check if m above (i,j,k).",,
+----------------------Stack routines------------------,,
+"Pushes cell p on top of stack t, and returns new top.",,
+"Pops off top elment of stack p, frees up the cell, and
+        returns new top.",,
+"Prints the stack, both point index and point coordinates.",,
+"GetCell returns a pointer to a newly allocated piece of storage
+        of type tCell, or exits if no space is available.",,
+"tri.c
+	Written by Joseph O'Rourke
+	orourke@cs.smith.edu
+	Triangulation code for ""Computational Geometry in C.""
+        Assumes polygon vertices are entered in ccw order.",,
+Dimension of points,,
+type integer point,,
+type double point,,
+Max # of pts in polygon,,
+type integer polygon,,
+"Returns twice the signed area of the triangle determined by a,b,c,
+        positive if a,b,c are oriented ccw, and negative if cw.",,
+"The text has this:
+        return
+                a[0] * b[1] - a[1] * b[0] +
+                a[1] * c[0] - a[0] * c[1] +
+                b[0] * c[1] - c[0] * b[1];
+
+	The following computation is algebraically equivalent but
+	uses four fewer multiplications.  It is obtained by shifting the
+	coordinate system so that point a is the origin.",,
+Returns twice the area of polygon P.,,
+Partial area sum,,
+"Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise Xor operator may apply.
+	(This idea is due to Michael Baldwin.)",,
+"Returns true iff ab properly intersects cd: they share
+	a point interior to both segments.  The properness of the
+	intersection is ensured by using strict leftness.",,
+Eliminate improper cases.,,
+"Returns true iff c is strictly to the left of the directed
+        line through a to b.",,
+"Returns T iff (a,b,c) are collinear and point c lies 
+	on the closed segement ab.",,
+"If ab not vertical, check betweenness on x; else on y.",,
+"Returns true iff segments ab and cd intersect, properly or improperly.",,
+"Returns T iff (v_i, v_j) is a proper internal *or* external
+	diagonal of P, *ignoring edges incident to v_i and v_j*.",,
+"For each edge (k,k+1) of P",,
+Skip edges incident to i or j,,
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.",,
+"Prints out n-3 diagonals (as pairs of integer indices)
+	which form a triangulation of P.",,
+"PrintPoly( n, P, labels );",,
+"Returns true iff the diagonal (i,j) is striclty internal to the 
+	polygon P in the neighborhood of the i endpoint.",,
+i + 1,,
+i - 1,,
+"If P[i] is a convex vertex [ i+1 left or on (i-1,i) ].",,
+"Assume (i-1,i,i+1) not collinear.",,
+else P[i] is reflex.,,
+"Returns T iff (v_i, v_j) is a proper internal
+	diagonal of P.",,
+Removes P[i] by copying P[i+1]...P[n-1] left one index.,,
+"Reads in the coordinates of the vertices of a polygon from stdin,
+        puts them into P, and returns n, the number of vertices.
+        The input is assumed to be pairs of whitespace-separated coordinates,
+        one pair per line.  The number of points is not part of the input.",,
+Puts a - b into c.,,
+Returns the dot product of the two input vectors.,,
+Returns the square of the length of the vector p.,,
+"chull.c
+	Written by Joseph O'Rourke
+		and John Kutcher, Catherine Schevon, Susan Weller.
+	Last modified: 14 August 1995",,
+Define Boolean type,,
+Define vertex indices.,,
+"Define structures for vertices, edges and faces",,
+pointer to incident cone edge (or NULL),,
+T iff point on hull.,,
+T iff point already processed.,,
+pointer to incident cone face.,,
+T iff edge should be delete.,,
+T iff face visible from new point.,,
+Define flags,,
+Global variable definitions,,
+Function declarations,,
+--------------------------------------------------------------------------,,
+"------------------------------------------------------------------
+MakeVertex: Makes a vertex, nulls out fields.
+--------------------------------------------------------------------",,
+"------------------------------------------------------------------
+ReadVertices: Reads in the vertices, and links them into a circular
+list with MakeVertex.  There is no need for the # of vertices to be
+the first line: the function looks for EOF instead.
+--------------------------------------------------------------------",,
+"------------------------------------------------------------------
+Print: Prints out the vertices and the faces.  Uses the vnum indices 
+corresponding to the order in which the vertices were input.
+--------------------------------------------------------------------",,
+"Pointers to vertices, edges, faces.",,
+Counters for Euler's formula.,,
+"Note: lowercase==pointer, uppercase==counter.",,
+Vertices.,,
+Faces.,,
+Edges.,,
+Edges not printed out (but easily added).,,
+"-----------------------------------------------------------------------
+ Tetrahedron builds the initial tetrahedron.  It first finds 3 noncollinear
+ points and makes a face out of them, and then finds a fourth point that
+ is not coplanar with that face.  The vertices are stored in the face
+ structure in counterclockwise order so that the volume between the face
+ and the point is negative. Lastly, the 3 newfaces to the fourth point
+ are constructed and the data structures are cleaned up. 
+ -----------------------------------------------------------------------",,
+Find 3 non-Collinear points.,,
+Mark the vertices as processed.,,
+Create edges of the initial triangle.,,
+Create face for triangle.,,
+Link edges to face.,,
+"Find a fourth, non-coplanar point to form tetrahedron.",,
+Store vertices in ccw order.,,
+"Construct the faces and edges between the original
+   	   triangle and the fourth point.",,
+"-------------------------------------------------------------------------
+ConstructHull adds the vertices to the hull one at a time.  The hull
+vertices are those in the list marked as onhull.
+  -------------------------------------------------------------------------",,
+T if addition changes hull; not used.,,
+"-------------------------------------------------------------------------
+AddOne is passed a vertex.  It first determines all faces visible from 
+that point.  If none are visible then the point is marked as not onhull.
+Next is a loop over edges.  If both faces adjacent to an edge are
+visible, then the edge is marked for deletion.  If just one of the adjacent 
+faces is visible then a new face is constructed.
+--------------------------------------------------------------------------",,
+Mark faces visible from p.,,
+"if (debug) fprintf(stderr,""faddr: %6x   paddr: %6x   Vol = %d\n"",f,p,vol);",,
+"If no faces are visible from p, then p is inside the hull.",,
+"Mark edges in interior of visible region for deletion.
+	   Erect a newface based on each border edge.",,
+e interior: mark for deletion.,,
+e border: make a new face.,,
+"-------------------------------------------------------------------------
+Volume6 returns six times the volume of the tetrahedron determined by f 
+and p.  Volume6 is positive iff p is on the negative side of f,
+where the positive side is determined by the rh-rule.  So the volume 
+is positive if the ccw normal to f points outside the tetrahedron.
+--------------------------------------------------------------------------",,
+"This is the expression used in the text.  Now replaced.
+	vol = 	 -az * by * cx + ay * bz * cx + az * bx * cy - ax * bz * cy 
+		- ay * bx * cz + ax * by * cz + az * by * dx - ay * bz * dx 
+		- az * cy * dx + bz * cy * dx + ay * cz * dx - by * cz * dx 
+		- az * bx * dy + ax * bz * dy + az * cx * dy - bz * cx * dy 
+		- ax * cz * dy + bx * cz * dy + ay * bx * dz - ax * by * dz 
+		- ay * cx * dz + by * cx * dz + ax * cy * dz - bx * cy * dz;",,
+"This expression is algebraically equivalent to the above, but
+	uses fewer multiplications.
+	vol =	 -(az-dz) * (by-dy) * (cx-dx) 
+		+ (ay-dy) * (bz-dz) * (cx-dx) 
+		+ (az-dz) * (bx-dx) * (cy-dy) 
+		- (ax-dx) * (bz-dz) * (cy-dy) 
+		- (ay-dy) * (bx-dx) * (cz-dz) 
+		+ (ax-dx) * (by-dy) * (cz-dz);",,
+"And this one has even fewer arithmetic operations:
+	   (thanks to Robert Fraczkiewicz):",,
+Compare integer volume with double volume for saftey.,,
+Return based on double volume.,,
+"-------------------------------------------------------------------------
+Volumed is the same as Volume6 but computed with doubles.  For protection
+against overflow.
+--------------------------------------------------------------------------",,
+-------------------------------------------------------------------------,,
+"----------------------------------------------------------------------
+MakeStructs makes a new face and two new edges between the 
+edge and the point that are passed to it. It returns a pointer to
+the new face.
+----------------------------------------------------------------------",,
+Make two new edges (if don't already exist).,,
+"If the edge exists, copy it into new_edge.",,
+"Otherwise (duplicate is NULL), MakeEdge.",,
+Make the new face.,,
+Set the adjacent face pointers.,,
+Only one NULL link should be set to new_face.,,
+"------------------------------------------------------------------------
+MakeCcw puts the vertices in the face structure in counterclockwise order.  
+If there is no adjacent face[1] then we know that
+we are working with the first face of the initial tetrahedron.  In this
+case we want to store the vertices in the opposite order from the 
+initial face.  Otherwise, we want to store the vertices in the same order
+as in the visible face.  The third vertex is always p.
+------------------------------------------------------------------------",,
+Index,,
+The invisible face adjacent to e,,
+"Temporary, for swapping",,
+"If this is the initial tetrahedron, then e has only one
+	   adjacent face, and use that for fi.  Otherwise, use the
+	   invisible face.",,
+"Set vertex[0] & [1] of f to have the opposite orientation
+	   as do the corresponding vertices of fi.",,
+Find the index i of e->endpoint[1] in fi.,,
+Orient f opposite that of fi.,,
+"---------------------------------------------------------------------
+MakeEdge creates a new cell and initializes all pointers to NULL
+and sets all flags to off.  It returns a pointer to the empty cell.
+---------------------------------------------------------------------",,
+"---------------------------------------------------------------------
+MakeFace creates a new face structure and initializes all of its
+flags to NULL and sets all the flags to off.  It returns a pointer
+to the empty cell.
+----------------------------------------------------------------------",,
+"-------------------------------------------------------------------------
+CleanUp goes through each data structure list and clears all
+flags and NULLs out some pointers.  The order of processing
+(edges, faces, vertices) is important.
+------------------------------------------------------------------------",,
+"------------------------------------------------------------------------
+CleanEdges runs through the edge list and cleans up the structure.
+If there is a newface then it will put that face in place of the 
+visible face and NULL out newface. It also deletes so marked edges.
+-----------------------------------------------------------------------",,
+Primary index into edge list.,,
+Temporary edge pointer.,,
+Integrate the newface's into the data structure.,,
+Check every edge.,,
+Delete any edges marked for deletion.,,
+"------------------------------------------------------------------------
+CleanFaces runs through the face list and deletes any face marked visible.
+-----------------------------------------------------------------------",,
+Primary pointer into face list.,,
+"Temporary pointer, for deleting.",,
+"-------------------------------------------------------------------------
+CleanVertices runs through the vertex list and deletes the 
+vertices that are marked as processed but are not incident to any undeleted
+edges. 
+-------------------------------------------------------------------------",,
+Mark all vertices incident to some undeleted edge as on the hull.,,
+"Delete all vertices that have been processed but
+	   are not on the hull.",,
+Reset flags.,,
+"------------------------------------------------------------------
+Collinear checks to see if the three points given are collinear,
+by checking to see if each element of the cross product is zero.
+---------------------------------------------------------------------",,
+"------------------------------------------------------------------------
+Consistency runs through the edge list and checks that all
+adjacent faces have their endpoints in opposite order.  This verifies
+that the vertices are in counterclockwise order.
+-----------------------------------------------------------------------",,
+find index of endpoint[0] in adjacent face[0],,
+find index of endpoint[0] in adjacent face[1],,
+check if the endpoints occur in opposite order,,
+"----------------------------------------------------------------------
+Convexity checks that the volume between every face and every
+point is negative.  This shows that each point is inside every face
+and therefore the hull is convex.
+---------------------------------------------------------------------",,
+"----------------------------------------------------------------------
+CheckEuler checks Euler's relation, as well as its implications when
+all faces are known to be triangles.  Only prints positive information
+when debug is true, but always prints negative information.
+  ---------------------------------------------------------------------",,
+-----------------------------------------------------------------------,,
+#ERROR!,,
+-------------------------------------------------------------------,,
+-------------------------------------------------------------------------,,
+-------------------------------------------------------------------------,,
+-------------------------------------------------------------------------,,
+"-------------------------------------------------------------------------
+spiral.c
+-------------------------------------------------------------------------
+This program will generate a given number of spiral points uniformly 
+distributed on the surface of a sphere. The number of points is given on 
+the command line as the first parameter.  Thus `spiral 100' will generate
+100 points on the surface of a sphere, and output them to stdout.
+        A number of different command-line flags are provided to set the
+radius of the sphere, control the output format, or generate points on
+an ellipsoid.  The definition of the flags is printed if the program is
+run without arguments: `spiral'.
+        The idea behind the algorithm is that one can cut the globe with 
+N horizontal planes spaced 2/(N-1) units apart, forming N circles of 
+latitude on the sphere, each latitude containing one spiral point.  To
+obtain the kth spiral point, one proceeds upward from the (k-1)st point
+(theta(k-1), phi(k-1)) along a great circle to the next latitude and 
+travels counterclockwise along ti for a fixed distance to arrive at the 
+kth point (theta(k), phi(k)).
+        The default output is integers, rounded from the floating point
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.
+        The flags -a, -b, -c are used to set ellipsoid axis lengths.
+Note that the points are not uniformly distributed on the ellipsoid: they
+are uniformly distributed on the sphere and that is scaled to an ellipsoid.
+        random() is used to generate random numbers, seeded with time().
+How to compile:
+        gcc -o spiral spiral.c -lm
+
+Reference: E.B. Saff and A.B.J. Kuijlaars, Distributing Many Points on a Sphere,
+The Mathematical Intelligencer, 19(1), Winter (1997);
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------",,
+Test for flags,,
+Test for radius flag,,
+Test whether user wants floating point output,,
+Test for ellipsoid radius if any,,
+number of points,,
+index,,
+default radius,,
+true radius,,
+ellipsoid axis lengths,,
+Generate a random point on a sphere of radius 1.,,
+"z = cos ( theta ); But z==h, so:",,
+"-------------------------------------------------------------------------
+cube.c
+-------------------------------------------------------------------------
+This program will generate a given number of points uniformly distributed
+inside a cube. The number of points is given on the command line as the 
+first parameter.  Thus `cube 100' will generate 100 points in a cube,
+and output them to stdout.
+	A number of different command-line flags are provided to set the 
+side-length of the cube, control the output format, or to change the cube
+to a box. The definition of the flags is printed if the program is 
+run without arguments: `cube'.  Note that -s sets the half-side
+length: points are generated between -s and +s.
+        The default output is integers, rounded from the floating point
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.
+	The flags -a, -b, -c are used to set different x, y, z side-lengths 
+for a box.  Note that the points are not uniformly distributed: they are 
+uniformly distributed on the cube and then scaled.
+	random() is used to generate random numbers, seeded with time().
+How to compile:
+	gcc -o cube cube.c -lm
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------",,
+MAX_INT is the range of random(): 2^{31}-1,,
+Test for flags,,
+Test for side-length flag,,
+Test whether user wants floating point output,,
+"Test for x, y, z dimensions if any",,
+number of points,,
+default (half) side-length,,
+true (half) side-length,,
+axis lengths,,
+Generate a random point on a unit cube.,,
+"-------------------------------------------------------------------------
+sphere.c
+-------------------------------------------------------------------------
+This program will generate a given number of points uniformly distributed
+on the surface of a sphere. The number of points is given on the command
+line as the first parameter.  Thus `sphere 100' will generate 100 points 
+on the surface of a sphere, and output them to stdout.
+	A number of different command-line flags are provided to set the 
+radius of the sphere, control the output format, or generate points on 
+an ellipsoid.  The definition of the flags is printed if the program is 
+run without arguments: `sphere'.
+	The idea behind the algorithm is that for a sphere of radius r, the 
+area of a zone of width h is always 2*pi*r*h, regardless of where the sphere 
+is sliced.  The implication is that the z-coordinates of random points on a 
+sphere are uniformly distributed, so that x and y can always be generated by 
+a given z and a given angle.
+	The default output is integers, rounded from the floating point 
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.  
+	The flags -a, -b, -c are used to set ellipsoid axis lengths.  
+Note that the points are not uniformly distributed on the ellipsoid: they 
+are uniformly distributed on the sphere and that is scaled to an ellipsoid.
+	random() is used to generate random numbers, seeded with time().
+How to compile:
+	gcc -o sphere sphere.c -lm
+
+Reference: J. O'Rourke, Computational Geometry Column 31,
+Internat. J. Comput. Geom. Appl. 7(4) 379--382 (1997); 
+also in SIGACT News, 28(2):20--23 (1997), Issue 103.
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------",,
+MAX_INT is the range of random(): 2^{31}-1,,
+Test for flags,,
+Test for radius flag,,
+Test whether user wants floating point output,,
+Test for ellipsoid radius if any,,
+number of points,,
+default radius,,
+true radius,,
+ellipsoid axis lengths,,
+Generate a random point on a sphere of radius 1.,,
+"the sphere is sliced at z, and a random point at angle t
+       generated on the circle of intersection.",,

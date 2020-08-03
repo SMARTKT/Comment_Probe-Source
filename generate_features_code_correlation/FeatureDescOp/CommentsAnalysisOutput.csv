@@ -1,0 +1,1423 @@
+"Comment","Code Output","Manual pred."
+"COMMENT","Op/Desc","COMMENT : d
+"
+"Written by Joseph O'Rourke.
+   Graham's algorithm for hull of 2-dim points.
+   See ""Computational Geometry in C.""","d, d, d","Written by Joseph O'Rourke. : d
+   Graham's algorithm for hull of 2-dim points. : o
+   See ""Computational Geometry in C."" : o
+"
+"Dimension of points","d","Dimension of points : d
+"
+"type integer point","d","type integer point : o
+"
+"type double point","d","type double point : d
+"
+"Max # of pts in polygon","d","Max # of pts in polygon : d
+"
+"type integer polygon","d","type integer polygon : d
+"
+"----------from tri.c-------------","d","----------from tri.c------------- : o
+"
+"----------from tri.c-------------","d","----------from tri.c------------- : o
+"
+"global so compare can access it.","d","global so compare can access it. : o
+"
+"base: pointer to 1st elem","d","base: pointer to 1st elem : d
+"
+"count: # of elems","d","count: # of elems : d
+"
+"size of each elem","d","size of each elem : d
+"
+"-1,0,+1 compare fnc","d","-1,0,+1 compare fnc : d
+"
+"FindLowest finds the rightmost lowest point and swaps with 0-th.
+        The lowest point has the min y-coord, and amongst those, the
+        max x-coord: so it is rightmost among the lowest.","o, d","FindLowest finds the rightmost lowest point and swaps with 0-th. : o
+        The lowest point has the min y-coord, and amongst those, the : o
+        max x-coord: so it is rightmost among the lowest. : d
+"
+"Index of lowest so far.","d","Index of lowest so far. : d
+"
+"To hold point when swapping.","o","To hold point when swapping. : o
+"
+"swap","o/d","swap : d
+"
+"Compare: returns -1,0,+1 if p1 < p2, =, or > respectively;
+        here ""<"" means smaller angle.  Follows the conventions of qsort.","o, d","Compare: returns -1,0,+1 if p1 < p2, =, or > respectively : o
+ : e
+        here ""<"" means smaller angle.  Follows the conventions of qsort. : d
+"
+"area","d","area : d
+"
+"ri = pi - p0","d","ri = pi - p0 : d
+"
+"length of r1 & r2","d","length of r1 & r2 : d
+"
+"Get a cell, fill it with i, and push it onto the stack.
+        Return pointer to stack top.","o","Get a cell, fill it with i, and push it onto the stack. : o
+        Return pointer to stack top. : o
+"
+"Performs the Graham scan on an array of angularly sorted points P.","o","Performs the Graham scan on an array of angularly sorted points P. : d
+"
+"Initialize stack to (P[n-1], P[0]).","o","Initialize stack to (P[n-1], P[0]). : o
+"
+"Bottom two elements will never be removed.","o","Bottom two elements will never be removed. : o
+"
+"P[n-1] pushed twice, so pop it off.","o","P[n-1] pushed twice, so pop it off. : o
+"
+"inpoly.c
+	Written by Joseph O'Rourke
+	orourke@sophia.smith.edu","d","inpoly.c : d
+	Written by Joseph O'Rourke : d
+	orourke@sophia.smith.edu : d
+"
+"Dimension of points","d","Dimension of points : d
+"
+"type integer point","d","type integer point : o
+"
+"type double point","d","type double point : d
+"
+"Max # of pts in polygon","d","Max # of pts in polygon : d
+"
+"type integer polygon","d","type integer polygon : d
+"
+"Last point is the point q","d","Last point is the point q : d
+"
+"Returns true if q is inside polygon P.","o","Returns true if q is inside polygon P. : d
+"
+"point index; i1 = i-1 mod n","d, d","point index : d
+ i1 = i-1 mod n : o
+"
+"dimension index","d","dimension index : d
+"
+"x intersection of e with ray","d","x intersection of e with ray : d
+"
+"number of edge/ray crossings","d","number of edge/ray crossings : d
+"
+"Shift so that q is the origin.","o","Shift so that q is the origin. : o
+"
+"For each edge e=(i-1,i), see if crosses ray.","o","For each edge e=(i-1,i), see if crosses ray.: e
+"
+"if e straddles the x-axis...","o/d","if e straddles the x-axis... : o
+"
+"e straddles ray, so compute intersection with ray.","o","e straddles ray, so compute intersection with ray. : d
+"
+"crosses ray if strictly positive intersection.","","crosses ray if strictly positive intersection. : o
+"
+"q inside if an odd number of crossings.","","q inside if an odd number of crossings. : o
+"
+"Reads in the coordinates of the vertices of a polygon from stdin,
+        puts them into P, and returns n, the number of vertices.
+        Formatting conventions: etc.","o, o, o, d","Reads in the coordinates of the vertices of a polygon from stdin, : d
+        puts them into P, and returns n, the number of vertices. : o
+        Formatting conventions: etc. : d
+"
+"arm.c
+        Prints out one arm configuration to reach given target.
+        Assumes number of links >= 3.","d, o, d","arm.c : d
+        Prints out one arm configuration to reach given target. : o
+        Assumes number of links >= 3. : d
+"
+"Dimension of points","d","Dimension of points : d
+"
+"type integer point","d","type integer point : o
+"
+"type double point","d","type double point : d
+"
+"link lengths","d","link lengths : o
+"
+"number of links","d","number of links : d
+"
+"target point","d","target point : d
+"
+"index of median link","d","index of median link : d
+"
+"length of links between kinks","d","length of links between kinks : d
+"
+"total length of all links","d","total length of all links : d
+"
+"floor of half of total","d","floor of half of total : d
+"
+"Compute total & half length.","o","Compute total & half length. : o
+"
+"Find median link.","o","Find median link. : o
+"
+"coords of kinked joint returned by Solve2","d","coords of kinked joint returned by Solve2 : o
+"
+"Joint1 on x-axis","d","Joint1 on x-axis : o
+"
+"translated target","d","translated target : d
+"
+"pin J0 to 0.","o","pin J0 to 0. : o
+"
+"Shift so J1 is origin.","o","Shift so J1 is origin. : o
+"
+"Shift solution back to origin.","o","Shift solution back to origin. : o
+"
+"center of circle 1","d","center of circle 1 : d
+"
+"# of solns: 0,1,2,3(infinite)","d, d","# of solns: 0,1,2,3(infinite) : d
+"
+"TwoCircles finds the intersection points between two circles.
+        This is the general routine, no assumptions.
+        One intersection point is placed in p.","d, d, o","TwoCircles finds the intersection points between two circles. : o
+        This is the general routine, no assumptions. : d
+        One intersection point is placed in p. : d
+"
+"TwoCircles0a assumes that the first circle is centered 
+        on the origin.  It handles all the special cases, returning
+        the number of intersection points: 0, 1, 2, 3 (inf).","d, d/o","TwoCircles0a assumes that the first circle is centered  : o
+        on the origin.  It handles all the special cases, returning : d
+        the number of intersection points: 0, 1, 2, 3 (inf). : d
+"
+"dist to center 2 squared","o","dist to center 2 squared : d
+"
+"(r1 +/- r2)^2","d","(r1 +/- r2)^2: e
+"
+"fraction along c2 for nsoln=1","d","fraction along c2 for nsoln=1 : o
+"
+"Handle special cases.","o","Handle special cases. : o
+"
+"No solution if c2 out of reach + or -.","d","No solution if c2 out of reach + or -. : o
+"
+"One solution if c2 just reached.","d","One solution if c2 just reached. : d
+"
+"Then solution is r1-of-the-way (f) to c2.","d","Then solution is r1-of-the-way (f) to c2. : d
+"
+"Circles coincide.","d","Circles coincide. : o
+"
+"Two intersections.","d","Two intersections. : d
+"
+"TwoCircles0b also assumes that the first circle is centered       
+        on the origin.  It rotates c2 to lie on the x-axis.","d, o","TwoCircles0b also assumes that the first circle is centered        : o
+        on the origin.  It rotates c2 to lie on the x-axis. : d
+"
+"center of 2nd circle when rotated to x-axis","","center of 2nd circle when rotated to x-axis : d
+"
+"one solution when c2 on x-axis","","one solution when c2 on x-axis : d
+"
+"sine and cosine of angle of c2","","sine and cosine of angle of c2 : d
+"
+"Rotate c2 to a2 on x-axis.","","Rotate c2 to a2 on x-axis. : o
+"
+"Rotate back","","Rotate back : o
+"
+"TwoCircles00 assume circle one is origin-centered, and
+        that the center of the second circle is at (a2,0).","","TwoCircles00 assume circle one is origin-centered, and
+        that the center of the second circle is at (a2,0).: e
+"
+"Two intersections (only one returned in p).","","Two intersections (only one returned in p). : d
+"
+"Dimension of points","","Dimension of points : d
+"
+"type integer point","","type integer point : o
+"
+"type double point","","type double point : d
+"
+"Max # of pts in polygon","","Max # of pts in polygon : d
+"
+"type integer polygon","","type integer polygon : d
+"
+"P has n vertices, Q has m vertices.","","P has n vertices, Q has m vertices. : d
+"
+"indices on P and Q (resp.)","","indices on P and Q (resp.) : d
+"
+"a-1, b-1 (resp.)","","a-1, b-1 (resp.) : d
+"
+"directed edges on P and Q (resp.)","","directed edges on P and Q (resp.) : d
+"
+"A x B","","A x B : d
+"
+"b in H(A); a in H(b).","","b in H(A) : d
+ a in H(b). : d
+"
+"(0,0)","","(0,0): e
+"
+"double point of intersection","","double point of intersection : o
+"
+"{Pin, Qin, Unknown}:
+                                   which polygon is known to be inside","","{Pin, Qin, Unknown}:
+                                   which polygon is known to be inside: e
+"
+"loop counter","","loop counter : d
+"
+"# advances on a & b indices 
+				   (from first intersection)","","# advances on a & b indices 
+				   (from first intersection): e
+"
+"have the advance counters ever been reset","","have the advance counters ever been reset : d
+"
+"Initialize variables.","","Initialize variables. : o
+"
+"Computations of key variables.","","Computations of key variables. : d
+"
+"If A & B intersect, update inflag.","","If A & B intersect, update inflag. : d
+"
+"Advance rules.","","Advance rules. : o
+"
+"if ( cross < 0 )","","if ( cross < 0 ) : d
+"
+"Quit when both adv. indices have cycled, or one has cycled twice.","","Quit when both adv. indices have cycled, or one has cycled twice. : d
+"
+"Deal with special cases: not implemented here.","","Deal with special cases: not implemented here. : d
+"
+"Prints out the double point of intersection, and toggles
+	in/out flag.","","Prints out the double point of intersection, and toggles : o
+	in/out flag. : o
+"
+"Update inflag.","","Update inflag. : d
+"
+"Advances and prints out an inside vertex if appropriate.","","Advances and prints out an inside vertex if appropriate. : d
+"
+"The two parameters of the parametric eqns.","","The two parameters of the parametric eqns. : o
+"
+"Denoninator of solutions.","","Denoninator of solutions. : d
+"
+"If denom is zero, then the line segments are parallel.","","If denom is zero, then the line segments are parallel. : d
+"
+"In this case, return false even though the segments might overlap.","","In this case, return false even though the segments might overlap. : d
+"
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.","","Implements a = b, assignment of points/vectors. : d
+	Assignment between arrays is not possible in C. : d
+"
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.","","Reads in the coordinates of the vertices of a polygon from stdin, : d
+	puts them into P, and returns n, the number of vertices. : o
+	Formatting conventions: etc. : d
+"
+"Returns true iff c is strictly to the left of the directed
+	line through a to b.","","Returns true iff c is strictly to the left of the directed : d
+	line through a to b. : o
+"
+"Puts a - b into c.","","Puts a - b into c. : d
+"
+"Returns twice the signed area of the triangle determined by a,b,c,
+        positive if a,b,c are oriented ccw, and negative if cw.","","Returns twice the signed area of the triangle determined by a,b,c, : o
+        positive if a,b,c are oriented ccw, and negative if cw. : o
+"
+"Written by Joseph O'Rourke.
+   Last modified February 17, 1991.
+   Code to triangulate a simple polygon.
+   Quadratic algorithm.
+   See ""Computational Geometry in C.""","","Written by Joseph O'Rourke. : d
+   Last modified February 17, 1991. : o
+   Code to triangulate a simple polygon. : o
+   Quadratic algorithm. : o
+   See ""Computational Geometry in C."" : o
+"
+"Dimension of points","","Dimension of points : d
+"
+"type integer point","","type integer point : o
+"
+"type double point","","type double point : d
+"
+"Max # of pts in polygon","","Max # of pts in polygon : d
+"
+"type integer polygon","","type integer polygon : d
+"
+"Returns twice the signed area of the triangle determined by a,b,c.
+        The area is positive if a,b,c are oriented ccw, negative if cw,
+	and zero if the points are collinear.","","Returns twice the signed area of the triangle determined by a,b,c. : o
+        The area is positive if a,b,c are oriented ccw, negative if cw, : d
+	and zero if the points are collinear. : o
+"
+"Returns twice the area of polygon P.","","Returns twice the area of polygon P. : d
+"
+"Partial area sum","","Partial area sum : o
+"
+"Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise xor operator may apply.
+	(This idea is due to Michael Baldwin.)","","Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise xor operator may apply.
+	(This idea is due to Michael Baldwin.): e
+"
+"Returns true iff ab properly intersects cd: they share
+	a point interior to both segments.  The properness of the
+	intersection is ensured by using strict leftness.","","Returns true iff ab properly intersects cd: they share : d
+	a point interior to both segments.  The properness of the : d
+	intersection is ensured by using strict leftness. : d
+"
+"Returns true iff c is strictly to the left of the directed
+	line through a to b.","","Returns true iff c is strictly to the left of the directed : d
+	line through a to b. : o
+"
+"Puts a - b into c.","","Puts a - b into c. : d
+"
+"Returns the dot product of the two input vectors.","","Returns the dot product of the two input vectors. : d
+"
+"Returns the square of the length of the vector p.","","Returns the square of the length of the vector p. : d
+"
+"Returns T iff point c lies on the closed segement ab.
+        First checks that c is collinear with a and b.","","Returns T iff point c lies on the closed segement ab. : o
+        First checks that c is collinear with a and b. : o
+"
+"Returns true iff segments ab and cd intersect,
+        properly or improperly.","","Returns true iff segments ab and cd intersect, : o
+        properly or improperly. : d
+"
+"Returns T iff (v_i, v_j) is a proper internal *or* external
+	diagonal of P, *ignoring edges incident to v_i and v_j*.","","Returns T iff (v_i, v_j) is a proper internal *or* external : d
+	diagonal of P, *ignoring edges incident to v_i and v_j*. : d
+"
+"For each edge (k,k+1) of P","","For each edge (k,k+1) of P : d
+"
+"Skip edges incident to i or j","","Skip edges incident to i or j : o
+"
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.","","Implements a = b, assignment of points/vectors. : d
+	Assignment between arrays is not possible in C. : d
+"
+"PrintPoly( n, P, labels );","","PrintPoly( n, P, labels ) : d
+ : e
+"
+"Prints out n-3 diagonals (as pairs of integer indices)
+	which form a triangulation of P.
+	This function initializes the data structures, and calls
+	Triangulate2 to clip off the ears one by one.","","Prints out n-3 diagonals (as pairs of integer indices) : o
+	which form a triangulation of P. : o
+	This function initializes the data structures, and calls : o
+	Triangulate2 to clip off the ears one by one. : d
+"
+"Ear[i] true iff (i,i+1,i+2) is an ear","","Ear[i] true iff (i,i+1,i+2) is an ear: e
+"
+"Copy points into temporary array & initialize labels.","","Copy points into temporary array & initialize labels. : o
+"
+"Ear[i] is true iff (i,i+1,i+2) is an ear.","","Ear[i] is true iff (i,i+1,i+2) is an ear. : d
+"
+"Initialize Ear[] for all i.","","Initialize Ear[] for all i. : d
+"
+"Triangulate2 is an O(n^2) triangulation function
+	(or it would be if the array squashing were replaced by
+	pointer movements).
+	Assumes all arrays (including Ear) have been initialized.","","Triangulate2 is an O(n^2) triangulation function
+	(or it would be if the array squashing were replaced by
+	pointer movements).
+	Assumes all arrays (including Ear) have been initialized.: e
+"
+"i-1,i,i+1,i+2,i+3","","i-1,i,i+1,i+2,i+3 : d
+"
+"Each step of outer loop removes one ear.","","Each step of outer loop removes one ear. : o
+"
+"Inner loop searches for an ear.","","Inner loop searches for an ear. : o
+"
+"Ear found.","","Ear found. : d
+"
+"(i,i+2) is a diagonal","","(i,i+2) is a diagonal: e
+"
+"Replace the two entries for segments
+				   incident to i+1:
+				   (i-1,i+1) ==> (i-1,i+2)
+				   (i+1,i+3) ==> (i,i+3)","","Replace the two entries for segments : o
+				   incident to i+1: : d
+				   (i-1,i+1) ==> (i-1,i+2) : d
+				   (i+1,i+3) ==> (i,i+3) : d
+"
+"Squash out the i1 entry in all arrays","","Squash out the i1 entry in all arrays : o
+"
+"out of inner loop","","out of inner loop : d
+"
+"Returns true iff the diagonal (i,j) is striclty internal to the 
+	polygon P in the neighborhood of the i endpoint.","","Returns true iff the diagonal (i,j) is striclty internal to the 
+	polygon P in the neighborhood of the i endpoint.: e
+"
+"i + 1","","i + 1 : o
+"
+"i - 1","","i - 1 : d
+"
+"If P[i] is a convex vertex [ i+1 left of (i-1,i) ].","","If P[i] is a convex vertex [ i+1 left of (i-1,i) ]. : d
+"
+"Assume (i-1,i,i+1) not collinear.","","Assume (i-1,i,i+1) not collinear. : o
+"
+"else P[i] is reflex.","","else P[i] is reflex. : d
+"
+"Returns T iff (v_i, v_j) is a proper internal
+	diagonal of P.","","Returns T iff (v_i, v_j) is a proper internal
+	diagonal of P.: e
+"
+"Removes P[i] by copying P[i+1]...P[n-1] left one index.","","Removes P[i] by copying P[i+1]...P[n-1] left one index. : d
+"
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.","","Reads in the coordinates of the vertices of a polygon from stdin, : d
+	puts them into P, and returns n, the number of vertices. : o
+	Formatting conventions: etc. : d
+"
+"Returns twice the signed area of the triangle determined by a,b,c.
+        The area is positive if a,b,c are oriented ccw, negative if cw,
+	and zero if the points are collinear.","","Returns twice the signed area of the triangle determined by a,b,c. : o
+        The area is positive if a,b,c are oriented ccw, negative if cw, : d
+	and zero if the points are collinear. : o
+"
+"Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise xor operator may apply.
+	(This idea is due to Michael Baldwin.)","","Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise xor operator may apply.
+	(This idea is due to Michael Baldwin.): e
+"
+"Puts a - b into c.","","Puts a - b into c. : d
+"
+"Returns the dot product of the two input vectors.","","Returns the dot product of the two input vectors. : d
+"
+"Returns the square of the length of the vector p.","","Returns the square of the length of the vector p. : d
+"
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.","","Implements a = b, assignment of points/vectors. : d
+	Assignment between arrays is not possible in C. : d
+"
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.","","Reads in the coordinates of the vertices of a polygon from stdin, : d
+	puts them into P, and returns n, the number of vertices. : o
+	Formatting conventions: etc. : d
+"
+"extreme.c
+	Written by Joseph O'Rourke
+	orourke@cs.smith.edu","","extreme.c : d
+	Written by Joseph O'Rourke : d
+	orourke@cs.smith.edu : d
+"
+"Dimension of points","","Dimension of points : d
+"
+"type integer point","","type integer point : o
+"
+"type double point","","type double point : d
+"
+"Max # of pts in polygon","","Max # of pts in polygon : d
+"
+"type integer polygon","","type integer polygon : d
+"
+"Returns index midway ccw from a to b, mod n.","","Returns index midway ccw from a to b, mod n. : d
+"
+"Returns index of a point extreme in direction u.","","Returns index of a point extreme in direction u. : d
+"
+"[a,b] includes extreme; a1=a+1.","","[a,b] includes extreme : o
+ a1=a+1. : d
+"
+"index midway; c1 is c +- 1.","","index midway : d
+ c1 is c +- 1. : d
+"
+"edge vectors after a, after c, before c.","","edge vectors after a, after c, before c. : o
+"
+"dots with u.","","dots with u. : o
+"
+"height difference: P[a] - P[c] in dir. u.","","height difference: P[a] - P[c] in dir. u. : d
+"
+"u rotated cw by pi/2","","u rotated cw by pi/2 : d
+"
+"Compute basic vectors and dots.","","Compute basic vectors and dots. : o
+"
+"Termination conditions","","Termination conditions : d
+"
+"If either A or C points left of u, then at extreme.","","If either A or C points left of u, then at extreme. : d
+"
+"From here on, can assume that zero dots put point on bot","","From here on, can assume that zero dots put point on bot : d
+"
+"Halving interval","","Halving interval : o
+"
+"new: (a,c)","","new: (a,c) : d
+"
+"new: (c,b)","","new: (c,b) : d
+"
+"new: (a,c)","","new: (a,c) : d
+"
+"new: (c,b)","","new: (c,b) : d
+"
+"new: (a,c)","","new: (a,c) : d
+"
+"new: (c,b)","","new: (c,b) : d
+"
+"Puts a - b into c.","","Puts a - b into c. : d
+"
+"Returns the dot product of the two input vectors.","","Returns the dot product of the two input vectors. : d
+"
+"printf(""Dot: a, b =\n"");
+	PrintPoint(a); putchar('\n');
+	PrintPoint(b); putchar('\n');","","printf(""Dot: a, b =\n"") : d
+ : e
+	PrintPoint(a) : d
+ putchar('\n') : o
+ : e
+	PrintPoint(b) : d
+ putchar('\n') : o
+ : e
+"
+"printf(""before: i=%d, sum=%d, a[i]=%d, b[i]=%d\n"", 
+			i, sum, a[i], b[i]);","","printf(""before: i=%d, sum=%d, a[i]=%d, b[i]=%d\n"",  : o
+			i, sum, a[i], b[i]) : d
+ : e
+"
+"printf(""after: i=%d, sum=%d, a[i]=%d, b[i]=%d\n"", 
+			i, sum, a[i], b[i]);","","printf(""after: i=%d, sum=%d, a[i]=%d, b[i]=%d\n"",  : d
+			i, sum, a[i], b[i]) : d
+ : e
+"
+"printf(""Dot: returning %d\n"", sum);","","printf(""Dot: returning %d\n"", sum) : d
+ : e
+"
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.","","Implements a = b, assignment of points/vectors. : d
+	Assignment between arrays is not possible in C. : d
+"
+"Reads in the coordinates of the vertices of a polygon from stdin,
+	puts them into P, and returns n, the number of vertices.
+	Formatting conventions: etc.","","Reads in the coordinates of the vertices of a polygon from stdin, : d
+	puts them into P, and returns n, the number of vertices. : o
+	Formatting conventions: etc. : d
+"
+"input points xy,z=x^2+y^2","","input points xy,z=x^2+y^2 : d
+"
+"number of input points","","number of input points : d
+"
+"indices of four points","","indices of four points : d
+"
+"outward vector normal to (i,j,k)","","outward vector normal to (i,j,k) : o
+"
+"t if m above of (i,j,k)","","t if m above of (i,j,k) : o
+"
+"Input points and compute z = x^2 + y^2.","","Input points and compute z = x^2 + y^2. : d
+"
+"For each triple (i,j,k)","","For each triple (i,j,k) : d
+"
+"Compute normal to triangle (i,j,k).","","Compute normal to triangle (i,j,k). : o
+"
+"Only examine faces on bottom of paraboloid: zn < 0.","","Only examine faces on bottom of paraboloid: zn < 0. : o
+"
+"For each other point m","","For each other point m : d
+"
+"Check if m above (i,j,k).","","Check if m above (i,j,k). : o
+"
+"----------------------Stack routines------------------","","----------------------Stack routines------------------ : d
+"
+"Pushes cell p on top of stack t, and returns new top.","","Pushes cell p on top of stack t, and returns new top. : o
+"
+"Pops off top elment of stack p, frees up the cell, and
+        returns new top.","","Pops off top elment of stack p, frees up the cell, and : d
+        returns new top. : d
+"
+"Prints the stack, both point index and point coordinates.","","Prints the stack, both point index and point coordinates.: e
+"
+"GetCell returns a pointer to a newly allocated piece of storage
+        of type tCell, or exits if no space is available.","","GetCell returns a pointer to a newly allocated piece of storage : o
+        of type tCell, or exits if no space is available. : d
+"
+"tri.c
+	Written by Joseph O'Rourke
+	orourke@cs.smith.edu
+	Triangulation code for ""Computational Geometry in C.""
+        Assumes polygon vertices are entered in ccw order.","","tri.c : d
+	Written by Joseph O'Rourke : d
+	orourke@cs.smith.edu : d
+	Triangulation code for ""Computational Geometry in C."" : d
+        Assumes polygon vertices are entered in ccw order. : d
+"
+"Dimension of points","","Dimension of points : d
+"
+"type integer point","","type integer point : o
+"
+"type double point","","type double point : d
+"
+"Max # of pts in polygon","","Max # of pts in polygon : d
+"
+"type integer polygon","","type integer polygon : d
+"
+"Returns twice the signed area of the triangle determined by a,b,c,
+        positive if a,b,c are oriented ccw, and negative if cw.","","Returns twice the signed area of the triangle determined by a,b,c, : o
+        positive if a,b,c are oriented ccw, and negative if cw. : o
+"
+"The text has this:
+        return
+                a[0] * b[1] - a[1] * b[0] +
+                a[1] * c[0] - a[0] * c[1] +
+                b[0] * c[1] - c[0] * b[1];
+
+	The following computation is algebraically equivalent but
+	uses four fewer multiplications.  It is obtained by shifting the
+	coordinate system so that point a is the origin.","","The text has this: : o
+        return : d
+                a[0] * b[1] - a[1] * b[0] + : d
+                a[1] * c[0] - a[0] * c[1] + : d
+                b[0] * c[1] - c[0] * b[1] : d
+ : e
+ : e
+	The following computation is algebraically equivalent but : d
+	uses four fewer multiplications.  It is obtained by shifting the : o
+	coordinate system so that point a is the origin. : o
+"
+"Returns twice the area of polygon P.","","Returns twice the area of polygon P. : d
+"
+"Partial area sum","","Partial area sum : o
+"
+"Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise Xor operator may apply.
+	(This idea is due to Michael Baldwin.)","","Exclusive or: true iff exactly one argument is true.
+	The arguments are negated to ensure that they are 0/1
+	values.  Then the bitwise Xor operator may apply.
+	(This idea is due to Michael Baldwin.): e
+"
+"Returns true iff ab properly intersects cd: they share
+	a point interior to both segments.  The properness of the
+	intersection is ensured by using strict leftness.","","Returns true iff ab properly intersects cd: they share : d
+	a point interior to both segments.  The properness of the : d
+	intersection is ensured by using strict leftness. : d
+"
+"Eliminate improper cases.","","Eliminate improper cases. : o
+"
+"Returns true iff c is strictly to the left of the directed
+        line through a to b.","","Returns true iff c is strictly to the left of the directed : d
+        line through a to b. : o
+"
+"Returns T iff (a,b,c) are collinear and point c lies 
+	on the closed segement ab.","","Returns T iff (a,b,c) are collinear and point c lies  : o
+	on the closed segement ab. : d
+"
+"If ab not vertical, check betweenness on x; else on y.","","If ab not vertical, check betweenness on x : d
+ else on y. : d
+"
+"Returns true iff segments ab and cd intersect, properly or improperly.","","Returns true iff segments ab and cd intersect, properly or improperly. : o
+"
+"Returns T iff (v_i, v_j) is a proper internal *or* external
+	diagonal of P, *ignoring edges incident to v_i and v_j*.","","Returns T iff (v_i, v_j) is a proper internal *or* external : d
+	diagonal of P, *ignoring edges incident to v_i and v_j*. : d
+"
+"For each edge (k,k+1) of P","","For each edge (k,k+1) of P : d
+"
+"Skip edges incident to i or j","","Skip edges incident to i or j : o
+"
+"Implements a = b, assignment of points/vectors.
+	Assignment between arrays is not possible in C.","","Implements a = b, assignment of points/vectors. : d
+	Assignment between arrays is not possible in C. : d
+"
+"Prints out n-3 diagonals (as pairs of integer indices)
+	which form a triangulation of P.","","Prints out n-3 diagonals (as pairs of integer indices) : o
+	which form a triangulation of P. : o
+"
+"PrintPoly( n, P, labels );","","PrintPoly( n, P, labels ) : d
+ : e
+"
+"Returns true iff the diagonal (i,j) is striclty internal to the 
+	polygon P in the neighborhood of the i endpoint.","","Returns true iff the diagonal (i,j) is striclty internal to the 
+	polygon P in the neighborhood of the i endpoint.: e
+"
+"i + 1","","i + 1 : o
+"
+"i - 1","","i - 1 : d
+"
+"If P[i] is a convex vertex [ i+1 left or on (i-1,i) ].","","If P[i] is a convex vertex [ i+1 left or on (i-1,i) ]. : d
+"
+"Assume (i-1,i,i+1) not collinear.","","Assume (i-1,i,i+1) not collinear. : o
+"
+"else P[i] is reflex.","","else P[i] is reflex. : d
+"
+"Returns T iff (v_i, v_j) is a proper internal
+	diagonal of P.","","Returns T iff (v_i, v_j) is a proper internal
+	diagonal of P.: e
+"
+"Removes P[i] by copying P[i+1]...P[n-1] left one index.","","Removes P[i] by copying P[i+1]...P[n-1] left one index. : d
+"
+"Reads in the coordinates of the vertices of a polygon from stdin,
+        puts them into P, and returns n, the number of vertices.
+        The input is assumed to be pairs of whitespace-separated coordinates,
+        one pair per line.  The number of points is not part of the input.","","Reads in the coordinates of the vertices of a polygon from stdin, : d
+        puts them into P, and returns n, the number of vertices. : o
+        The input is assumed to be pairs of whitespace-separated coordinates, : d
+        one pair per line.  The number of points is not part of the input. : d
+"
+"Puts a - b into c.","","Puts a - b into c. : d
+"
+"Returns the dot product of the two input vectors.","","Returns the dot product of the two input vectors. : d
+"
+"Returns the square of the length of the vector p.","","Returns the square of the length of the vector p. : d
+"
+"chull.c
+	Written by Joseph O'Rourke
+		and John Kutcher, Catherine Schevon, Susan Weller.
+	Last modified: 14 August 1995","","chull.c : d
+	Written by Joseph O'Rourke : d
+		and John Kutcher, Catherine Schevon, Susan Weller. : d
+	Last modified: 14 August 1995 : d
+"
+"Define Boolean type","","Define Boolean type : o
+"
+"Define vertex indices.","","Define vertex indices. : o
+"
+"Define structures for vertices, edges and faces","","Define structures for vertices, edges and faces : o
+"
+"pointer to incident cone edge (or NULL)","","pointer to incident cone edge (or NULL) : d
+"
+"T iff point on hull.","","T iff point on hull. : o
+"
+"T iff point already processed.","","T iff point already processed. : o
+"
+"pointer to incident cone face.","","pointer to incident cone face. : o
+"
+"T iff edge should be delete.","","T iff edge should be delete. : d
+"
+"T iff face visible from new point.","","T iff face visible from new point. : o
+"
+"Define flags","","Define flags : o
+"
+"Global variable definitions","","Global variable definitions : d
+"
+"Function declarations","","Function declarations : d
+"
+"--------------------------------------------------------------------------","","-------------------------------------------------------------------------- : d
+"
+"------------------------------------------------------------------
+MakeVertex: Makes a vertex, nulls out fields.
+--------------------------------------------------------------------","","------------------------------------------------------------------ : d
+MakeVertex: Makes a vertex, nulls out fields. : d
+-------------------------------------------------------------------- : d
+"
+"------------------------------------------------------------------
+ReadVertices: Reads in the vertices, and links them into a circular
+list with MakeVertex.  There is no need for the # of vertices to be
+the first line: the function looks for EOF instead.
+--------------------------------------------------------------------","","------------------------------------------------------------------ : d
+ReadVertices: Reads in the vertices, and links them into a circular : d
+list with MakeVertex.  There is no need for the # of vertices to be : d
+the first line: the function looks for EOF instead. : d
+-------------------------------------------------------------------- : d
+"
+"------------------------------------------------------------------
+Print: Prints out the vertices and the faces.  Uses the vnum indices 
+corresponding to the order in which the vertices were input.
+--------------------------------------------------------------------","","------------------------------------------------------------------ : d
+Print: Prints out the vertices and the faces.  Uses the vnum indices  : d
+corresponding to the order in which the vertices were input. : d
+-------------------------------------------------------------------- : d
+"
+"Pointers to vertices, edges, faces.","","Pointers to vertices, edges, faces.: e
+"
+"Counters for Euler's formula.","","Counters for Euler's formula. : d
+"
+"Note: lowercase==pointer, uppercase==counter.","","Note: lowercase==pointer, uppercase==counter. : d
+"
+"Vertices.","","Vertices. : d
+"
+"Faces.","","Faces. : d
+"
+"Edges.","","Edges. : d
+"
+"Edges not printed out (but easily added).","","Edges not printed out (but easily added). : o
+"
+"-----------------------------------------------------------------------
+ Tetrahedron builds the initial tetrahedron.  It first finds 3 noncollinear
+ points and makes a face out of them, and then finds a fourth point that
+ is not coplanar with that face.  The vertices are stored in the face
+ structure in counterclockwise order so that the volume between the face
+ and the point is negative. Lastly, the 3 newfaces to the fourth point
+ are constructed and the data structures are cleaned up. 
+ -----------------------------------------------------------------------","","----------------------------------------------------------------------- : d
+ Tetrahedron builds the initial tetrahedron.  It first finds 3 noncollinear : d
+ points and makes a face out of them, and then finds a fourth point that : o
+ is not coplanar with that face.  The vertices are stored in the face : d
+ structure in counterclockwise order so that the volume between the face : o
+ and the point is negative. Lastly, the 3 newfaces to the fourth point : d
+ are constructed and the data structures are cleaned up.  : d
+ ----------------------------------------------------------------------- : d
+"
+"Find 3 non-Collinear points.","","Find 3 non-Collinear points. : o
+"
+"Mark the vertices as processed.","","Mark the vertices as processed. : o
+"
+"Create edges of the initial triangle.","","Create edges of the initial triangle. : o
+"
+"Create face for triangle.","","Create face for triangle. : o
+"
+"Link edges to face.","","Link edges to face. : o
+"
+"Find a fourth, non-coplanar point to form tetrahedron.","","Find a fourth, non-coplanar point to form tetrahedron. : o
+"
+"Store vertices in ccw order.","","Store vertices in ccw order. : o
+"
+"Construct the faces and edges between the original
+   	   triangle and the fourth point.","","Construct the faces and edges between the original : o
+   	   triangle and the fourth point. : d
+"
+"-------------------------------------------------------------------------
+ConstructHull adds the vertices to the hull one at a time.  The hull
+vertices are those in the list marked as onhull.
+  -------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+ConstructHull adds the vertices to the hull one at a time.  The hull : o
+vertices are those in the list marked as onhull. : d
+  ------------------------------------------------------------------------- : d
+"
+"T if addition changes hull; not used.","","T if addition changes hull : o
+ not used. : d
+"
+"-------------------------------------------------------------------------
+AddOne is passed a vertex.  It first determines all faces visible from 
+that point.  If none are visible then the point is marked as not onhull.
+Next is a loop over edges.  If both faces adjacent to an edge are
+visible, then the edge is marked for deletion.  If just one of the adjacent 
+faces is visible then a new face is constructed.
+--------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+AddOne is passed a vertex.  It first determines all faces visible from  : o
+that point.  If none are visible then the point is marked as not onhull. : d
+Next is a loop over edges.  If both faces adjacent to an edge are : d
+visible, then the edge is marked for deletion.  If just one of the adjacent  : d
+faces is visible then a new face is constructed. : d
+-------------------------------------------------------------------------- : d
+"
+"Mark faces visible from p.","","Mark faces visible from p. : o
+"
+"if (debug) fprintf(stderr,""faddr: %6x   paddr: %6x   Vol = %d\n"",f,p,vol);","","if (debug) fprintf(stderr,""faddr: %6x   paddr: %6x   Vol = %d\n"",f,p,vol) : d
+ : e
+"
+"If no faces are visible from p, then p is inside the hull.","","If no faces are visible from p, then p is inside the hull.: e
+"
+"Mark edges in interior of visible region for deletion.
+	   Erect a newface based on each border edge.","","Mark edges in interior of visible region for deletion. : d
+	   Erect a newface based on each border edge. : o
+"
+"e interior: mark for deletion.","","e interior: mark for deletion. : d
+"
+"e border: make a new face.","","e border: make a new face. : d
+"
+"-------------------------------------------------------------------------
+Volume6 returns six times the volume of the tetrahedron determined by f 
+and p.  Volume6 is positive iff p is on the negative side of f,
+where the positive side is determined by the rh-rule.  So the volume 
+is positive if the ccw normal to f points outside the tetrahedron.
+--------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+Volume6 returns six times the volume of the tetrahedron determined by f  : d
+and p.  Volume6 is positive iff p is on the negative side of f, : d
+where the positive side is determined by the rh-rule.  So the volume  : o
+is positive if the ccw normal to f points outside the tetrahedron. : d
+-------------------------------------------------------------------------- : d
+"
+"This is the expression used in the text.  Now replaced.
+	vol = 	 -az * by * cx + ay * bz * cx + az * bx * cy - ax * bz * cy 
+		- ay * bx * cz + ax * by * cz + az * by * dx - ay * bz * dx 
+		- az * cy * dx + bz * cy * dx + ay * cz * dx - by * cz * dx 
+		- az * bx * dy + ax * bz * dy + az * cx * dy - bz * cx * dy 
+		- ax * cz * dy + bx * cz * dy + ay * bx * dz - ax * by * dz 
+		- ay * cx * dz + by * cx * dz + ax * cy * dz - bx * cy * dz;","","This is the expression used in the text.  Now replaced. : d
+	vol = 	 -az * by * cx + ay * bz * cx + az * bx * cy - ax * bz * cy  : d
+		- ay * bx * cz + ax * by * cz + az * by * dx - ay * bz * dx  : d
+		- az * cy * dx + bz * cy * dx + ay * cz * dx - by * cz * dx  : d
+		- az * bx * dy + ax * bz * dy + az * cx * dy - bz * cx * dy  : d
+		- ax * cz * dy + bx * cz * dy + ay * bx * dz - ax * by * dz  : d
+		- ay * cx * dz + by * cx * dz + ax * cy * dz - bx * cy * dz : d
+ : e
+"
+"This expression is algebraically equivalent to the above, but
+	uses fewer multiplications.
+	vol =	 -(az-dz) * (by-dy) * (cx-dx) 
+		+ (ay-dy) * (bz-dz) * (cx-dx) 
+		+ (az-dz) * (bx-dx) * (cy-dy) 
+		- (ax-dx) * (bz-dz) * (cy-dy) 
+		- (ay-dy) * (bx-dx) * (cz-dz) 
+		+ (ax-dx) * (by-dy) * (cz-dz);","","This expression is algebraically equivalent to the above, but : d
+	uses fewer multiplications. : o
+	vol =	 -(az-dz) * (by-dy) * (cx-dx)  : d
+		+ (ay-dy) * (bz-dz) * (cx-dx)  : d
+		+ (az-dz) * (bx-dx) * (cy-dy)  : d
+		- (ax-dx) * (bz-dz) * (cy-dy)  : d
+		- (ay-dy) * (bx-dx) * (cz-dz)  : d
+		+ (ax-dx) * (by-dy) * (cz-dz) : o
+ : e
+"
+"And this one has even fewer arithmetic operations:
+	   (thanks to Robert Fraczkiewicz):","","And this one has even fewer arithmetic operations: : o
+	   (thanks to Robert Fraczkiewicz): : d
+"
+"Compare integer volume with double volume for saftey.","","Compare integer volume with double volume for saftey. : o
+"
+"Return based on double volume.","","Return based on double volume. : d
+"
+"-------------------------------------------------------------------------
+Volumed is the same as Volume6 but computed with doubles.  For protection
+against overflow.
+--------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+Volumed is the same as Volume6 but computed with doubles.  For protection : d
+against overflow. : d
+-------------------------------------------------------------------------- : d
+"
+"-------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+"
+"----------------------------------------------------------------------
+MakeStructs makes a new face and two new edges between the 
+edge and the point that are passed to it. It returns a pointer to
+the new face.
+----------------------------------------------------------------------","","---------------------------------------------------------------------- : d
+MakeStructs makes a new face and two new edges between the  : o
+edge and the point that are passed to it. It returns a pointer to : d
+the new face. : d
+---------------------------------------------------------------------- : d
+"
+"Make two new edges (if don't already exist).","","Make two new edges (if don't already exist). : o
+"
+"If the edge exists, copy it into new_edge.","","If the edge exists, copy it into new_edge. : d
+"
+"Otherwise (duplicate is NULL), MakeEdge.","","Otherwise (duplicate is NULL), MakeEdge.: e
+"
+"Make the new face.","","Make the new face. : o
+"
+"Set the adjacent face pointers.","","Set the adjacent face pointers. : o
+"
+"Only one NULL link should be set to new_face.","","Only one NULL link should be set to new_face. : d
+"
+"------------------------------------------------------------------------
+MakeCcw puts the vertices in the face structure in counterclockwise order.  
+If there is no adjacent face[1] then we know that
+we are working with the first face of the initial tetrahedron.  In this
+case we want to store the vertices in the opposite order from the 
+initial face.  Otherwise, we want to store the vertices in the same order
+as in the visible face.  The third vertex is always p.
+------------------------------------------------------------------------","","------------------------------------------------------------------------ : d
+MakeCcw puts the vertices in the face structure in counterclockwise order.   : o
+If there is no adjacent face[1] then we know that : o
+we are working with the first face of the initial tetrahedron.  In this : o
+case we want to store the vertices in the opposite order from the  : d
+initial face.  Otherwise, we want to store the vertices in the same order : o
+as in the visible face.  The third vertex is always p. : o
+------------------------------------------------------------------------ : d
+"
+"Index","","Index : d
+"
+"The invisible face adjacent to e","","The invisible face adjacent to e : d
+"
+"Temporary, for swapping","","Temporary, for swapping : d
+"
+"If this is the initial tetrahedron, then e has only one
+	   adjacent face, and use that for fi.  Otherwise, use the
+	   invisible face.","","If this is the initial tetrahedron, then e has only one : d
+	   adjacent face, and use that for fi.  Otherwise, use the : o
+	   invisible face. : d
+"
+"Set vertex[0] & [1] of f to have the opposite orientation
+	   as do the corresponding vertices of fi.","","Set vertex[0] & [1] of f to have the opposite orientation : o
+	   as do the corresponding vertices of fi. : o
+"
+"Find the index i of e->endpoint[1] in fi.","","Find the index i of e->endpoint[1] in fi. : o
+"
+"Orient f opposite that of fi.","","Orient f opposite that of fi. : o
+"
+"---------------------------------------------------------------------
+MakeEdge creates a new cell and initializes all pointers to NULL
+and sets all flags to off.  It returns a pointer to the empty cell.
+---------------------------------------------------------------------","","--------------------------------------------------------------------- : d
+MakeEdge creates a new cell and initializes all pointers to NULL : o
+and sets all flags to off.  It returns a pointer to the empty cell. : d
+--------------------------------------------------------------------- : d
+"
+"---------------------------------------------------------------------
+MakeFace creates a new face structure and initializes all of its
+flags to NULL and sets all the flags to off.  It returns a pointer
+to the empty cell.
+----------------------------------------------------------------------","","--------------------------------------------------------------------- : d
+MakeFace creates a new face structure and initializes all of its : o
+flags to NULL and sets all the flags to off.  It returns a pointer : d
+to the empty cell. : d
+---------------------------------------------------------------------- : d
+"
+"-------------------------------------------------------------------------
+CleanUp goes through each data structure list and clears all
+flags and NULLs out some pointers.  The order of processing
+(edges, faces, vertices) is important.
+------------------------------------------------------------------------","","-------------------------------------------------------------------------
+CleanUp goes through each data structure list and clears all
+flags and NULLs out some pointers.  The order of processing
+(edges, faces, vertices) is important.
+------------------------------------------------------------------------: e
+"
+"------------------------------------------------------------------------
+CleanEdges runs through the edge list and cleans up the structure.
+If there is a newface then it will put that face in place of the 
+visible face and NULL out newface. It also deletes so marked edges.
+-----------------------------------------------------------------------","","------------------------------------------------------------------------ : d
+CleanEdges runs through the edge list and cleans up the structure. : o
+If there is a newface then it will put that face in place of the  : o
+visible face and NULL out newface. It also deletes so marked edges. : d
+----------------------------------------------------------------------- : d
+"
+"Primary index into edge list.","","Primary index into edge list. : d
+"
+"Temporary edge pointer.","","Temporary edge pointer. : o
+"
+"Integrate the newface's into the data structure.","","Integrate the newface's into the data structure. : d
+"
+"Check every edge.","","Check every edge. : o
+"
+"Delete any edges marked for deletion.","","Delete any edges marked for deletion. : o
+"
+"------------------------------------------------------------------------
+CleanFaces runs through the face list and deletes any face marked visible.
+-----------------------------------------------------------------------","","------------------------------------------------------------------------ : d
+CleanFaces runs through the face list and deletes any face marked visible. : o
+----------------------------------------------------------------------- : d
+"
+"Primary pointer into face list.","","Primary pointer into face list. : d
+"
+"Temporary pointer, for deleting.","","Temporary pointer, for deleting. : d
+"
+"-------------------------------------------------------------------------
+CleanVertices runs through the vertex list and deletes the 
+vertices that are marked as processed but are not incident to any undeleted
+edges. 
+-------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+CleanVertices runs through the vertex list and deletes the  : o
+vertices that are marked as processed but are not incident to any undeleted : d
+edges.  : d
+------------------------------------------------------------------------- : d
+"
+"Mark all vertices incident to some undeleted edge as on the hull.","","Mark all vertices incident to some undeleted edge as on the hull. : o
+"
+"Delete all vertices that have been processed but
+	   are not on the hull.","","Delete all vertices that have been processed but : o
+	   are not on the hull. : d
+"
+"Reset flags.","","Reset flags. : o
+"
+"------------------------------------------------------------------
+Collinear checks to see if the three points given are collinear,
+by checking to see if each element of the cross product is zero.
+---------------------------------------------------------------------","","------------------------------------------------------------------ : d
+Collinear checks to see if the three points given are collinear, : o
+by checking to see if each element of the cross product is zero. : o
+--------------------------------------------------------------------- : d
+"
+"------------------------------------------------------------------------
+Consistency runs through the edge list and checks that all
+adjacent faces have their endpoints in opposite order.  This verifies
+that the vertices are in counterclockwise order.
+-----------------------------------------------------------------------","","------------------------------------------------------------------------ : d
+Consistency runs through the edge list and checks that all : o
+adjacent faces have their endpoints in opposite order.  This verifies : o
+that the vertices are in counterclockwise order. : d
+----------------------------------------------------------------------- : d
+"
+"find index of endpoint[0] in adjacent face[0]","","find index of endpoint[0] in adjacent face[0] : o
+"
+"find index of endpoint[0] in adjacent face[1]","","find index of endpoint[0] in adjacent face[1] : o
+"
+"check if the endpoints occur in opposite order","","check if the endpoints occur in opposite order : o
+"
+"----------------------------------------------------------------------
+Convexity checks that the volume between every face and every
+point is negative.  This shows that each point is inside every face
+and therefore the hull is convex.
+---------------------------------------------------------------------","","---------------------------------------------------------------------- : d
+Convexity checks that the volume between every face and every : d
+point is negative.  This shows that each point is inside every face : d
+and therefore the hull is convex. : d
+--------------------------------------------------------------------- : d
+"
+"----------------------------------------------------------------------
+CheckEuler checks Euler's relation, as well as its implications when
+all faces are known to be triangles.  Only prints positive information
+when debug is true, but always prints negative information.
+  ---------------------------------------------------------------------","","---------------------------------------------------------------------- : d
+CheckEuler checks Euler's relation, as well as its implications when : o
+all faces are known to be triangles.  Only prints positive information : d
+when debug is true, but always prints negative information. : d
+  --------------------------------------------------------------------- : d
+"
+"-----------------------------------------------------------------------","","----------------------------------------------------------------------- : d
+"
+"#ERROR!","","#ERROR! : d
+"
+"-------------------------------------------------------------------","","------------------------------------------------------------------- : d
+"
+"-------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+"
+"-------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+"
+"-------------------------------------------------------------------------","","------------------------------------------------------------------------- : d
+"
+"-------------------------------------------------------------------------
+spiral.c
+-------------------------------------------------------------------------
+This program will generate a given number of spiral points uniformly 
+distributed on the surface of a sphere. The number of points is given on 
+the command line as the first parameter.  Thus `spiral 100' will generate
+100 points on the surface of a sphere, and output them to stdout.
+        A number of different command-line flags are provided to set the
+radius of the sphere, control the output format, or generate points on
+an ellipsoid.  The definition of the flags is printed if the program is
+run without arguments: `spiral'.
+        The idea behind the algorithm is that one can cut the globe with 
+N horizontal planes spaced 2/(N-1) units apart, forming N circles of 
+latitude on the sphere, each latitude containing one spiral point.  To
+obtain the kth spiral point, one proceeds upward from the (k-1)st point
+(theta(k-1), phi(k-1)) along a great circle to the next latitude and 
+travels counterclockwise along ti for a fixed distance to arrive at the 
+kth point (theta(k), phi(k)).
+        The default output is integers, rounded from the floating point
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.
+        The flags -a, -b, -c are used to set ellipsoid axis lengths.
+Note that the points are not uniformly distributed on the ellipsoid: they
+are uniformly distributed on the sphere and that is scaled to an ellipsoid.
+        random() is used to generate random numbers, seeded with time().
+How to compile:
+        gcc -o spiral spiral.c -lm
+
+Reference: E.B. Saff and A.B.J. Kuijlaars, Distributing Many Points on a Sphere,
+The Mathematical Intelligencer, 19(1), Winter (1997);
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------","","-------------------------------------------------------------------------
+spiral.c
+-------------------------------------------------------------------------
+This program will generate a given number of spiral points uniformly 
+distributed on the surface of a sphere. The number of points is given on 
+the command line as the first parameter.  Thus `spiral 100' will generate
+100 points on the surface of a sphere, and output them to stdout.
+        A number of different command-line flags are provided to set the
+radius of the sphere, control the output format, or generate points on
+an ellipsoid.  The definition of the flags is printed if the program is
+run without arguments: `spiral'.
+        The idea behind the algorithm is that one can cut the globe with 
+N horizontal planes spaced 2/(N-1) units apart, forming N circles of 
+latitude on the sphere, each latitude containing one spiral point.  To
+obtain the kth spiral point, one proceeds upward from the (k-1)st point
+(theta(k-1), phi(k-1)) along a great circle to the next latitude and 
+travels counterclockwise along ti for a fixed distance to arrive at the 
+kth point (theta(k), phi(k)).
+        The default output is integers, rounded from the floating point
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.
+        The flags -a, -b, -c are used to set ellipsoid axis lengths.
+Note that the points are not uniformly distributed on the ellipsoid: they
+are uniformly distributed on the sphere and that is scaled to an ellipsoid.
+        random() is used to generate random numbers, seeded with time().
+How to compile:
+        gcc -o spiral spiral.c -lm
+
+Reference: E.B. Saff and A.B.J. Kuijlaars, Distributing Many Points on a Sphere,
+The Mathematical Intelligencer, 19(1), Winter (1997);
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------: e
+"
+"Test for flags","","Test for flags : o
+"
+"Test for radius flag","","Test for radius flag : o
+"
+"Test whether user wants floating point output","","Test whether user wants floating point output : o
+"
+"Test for ellipsoid radius if any","","Test for ellipsoid radius if any : o
+"
+"number of points","","number of points : d
+"
+"index","","index : d
+"
+"default radius","","default radius : d
+"
+"true radius","","true radius : d
+"
+"ellipsoid axis lengths","","ellipsoid axis lengths : d
+"
+"Generate a random point on a sphere of radius 1.","","Generate a random point on a sphere of radius 1. : o
+"
+"z = cos ( theta ); But z==h, so:","","z = cos ( theta ) : d
+ But z==h, so: : d
+"
+"-------------------------------------------------------------------------
+cube.c
+-------------------------------------------------------------------------
+This program will generate a given number of points uniformly distributed
+inside a cube. The number of points is given on the command line as the 
+first parameter.  Thus `cube 100' will generate 100 points in a cube,
+and output them to stdout.
+	A number of different command-line flags are provided to set the 
+side-length of the cube, control the output format, or to change the cube
+to a box. The definition of the flags is printed if the program is 
+run without arguments: `cube'.  Note that -s sets the half-side
+length: points are generated between -s and +s.
+        The default output is integers, rounded from the floating point
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.
+	The flags -a, -b, -c are used to set different x, y, z side-lengths 
+for a box.  Note that the points are not uniformly distributed: they are 
+uniformly distributed on the cube and then scaled.
+	random() is used to generate random numbers, seeded with time().
+How to compile:
+	gcc -o cube cube.c -lm
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------","","-------------------------------------------------------------------------
+cube.c
+-------------------------------------------------------------------------
+This program will generate a given number of points uniformly distributed
+inside a cube. The number of points is given on the command line as the 
+first parameter.  Thus `cube 100' will generate 100 points in a cube,
+and output them to stdout.
+	A number of different command-line flags are provided to set the 
+side-length of the cube, control the output format, or to change the cube
+to a box. The definition of the flags is printed if the program is 
+run without arguments: `cube'.  Note that -s sets the half-side
+length: points are generated between -s and +s.
+        The default output is integers, rounded from the floating point
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.
+	The flags -a, -b, -c are used to set different x, y, z side-lengths 
+for a box.  Note that the points are not uniformly distributed: they are 
+uniformly distributed on the cube and then scaled.
+	random() is used to generate random numbers, seeded with time().
+How to compile:
+	gcc -o cube cube.c -lm
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------: e
+"
+"MAX_INT is the range of random(): 2^{31}-1","","MAX_INT is the range of random(): 2^{31}-1 : d
+"
+"Test for flags","","Test for flags : o
+"
+"Test for side-length flag","","Test for side-length flag : o
+"
+"Test whether user wants floating point output","","Test whether user wants floating point output : o
+"
+"Test for x, y, z dimensions if any","","Test for x, y, z dimensions if any : o
+"
+"number of points","","number of points : d
+"
+"default (half) side-length","","default (half) side-length : d
+"
+"true (half) side-length","","true (half) side-length : d
+"
+"axis lengths","","axis lengths : d
+"
+"Generate a random point on a unit cube.","","Generate a random point on a unit cube. : o
+"
+"-------------------------------------------------------------------------
+sphere.c
+-------------------------------------------------------------------------
+This program will generate a given number of points uniformly distributed
+on the surface of a sphere. The number of points is given on the command
+line as the first parameter.  Thus `sphere 100' will generate 100 points 
+on the surface of a sphere, and output them to stdout.
+	A number of different command-line flags are provided to set the 
+radius of the sphere, control the output format, or generate points on 
+an ellipsoid.  The definition of the flags is printed if the program is 
+run without arguments: `sphere'.
+	The idea behind the algorithm is that for a sphere of radius r, the 
+area of a zone of width h is always 2*pi*r*h, regardless of where the sphere 
+is sliced.  The implication is that the z-coordinates of random points on a 
+sphere are uniformly distributed, so that x and y can always be generated by 
+a given z and a given angle.
+	The default output is integers, rounded from the floating point 
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.  
+	The flags -a, -b, -c are used to set ellipsoid axis lengths.  
+Note that the points are not uniformly distributed on the ellipsoid: they 
+are uniformly distributed on the sphere and that is scaled to an ellipsoid.
+	random() is used to generate random numbers, seeded with time().
+How to compile:
+	gcc -o sphere sphere.c -lm
+
+Reference: J. O'Rourke, Computational Geometry Column 31,
+Internat. J. Comput. Geom. Appl. 7(4) 379--382 (1997); 
+also in SIGACT News, 28(2):20--23 (1997), Issue 103.
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------","","-------------------------------------------------------------------------
+sphere.c
+-------------------------------------------------------------------------
+This program will generate a given number of points uniformly distributed
+on the surface of a sphere. The number of points is given on the command
+line as the first parameter.  Thus `sphere 100' will generate 100 points 
+on the surface of a sphere, and output them to stdout.
+	A number of different command-line flags are provided to set the 
+radius of the sphere, control the output format, or generate points on 
+an ellipsoid.  The definition of the flags is printed if the program is 
+run without arguments: `sphere'.
+	The idea behind the algorithm is that for a sphere of radius r, the 
+area of a zone of width h is always 2*pi*r*h, regardless of where the sphere 
+is sliced.  The implication is that the z-coordinates of random points on a 
+sphere are uniformly distributed, so that x and y can always be generated by 
+a given z and a given angle.
+	The default output is integers, rounded from the floating point 
+computation.  The rounding implies that some points will fall outside
+the sphere, and some inside.  If all are required to be inside, then
+the calls to irint() should be removed.  
+	The flags -a, -b, -c are used to set ellipsoid axis lengths.  
+Note that the points are not uniformly distributed on the ellipsoid: they 
+are uniformly distributed on the sphere and that is scaled to an ellipsoid.
+	random() is used to generate random numbers, seeded with time().
+How to compile:
+	gcc -o sphere sphere.c -lm
+
+Reference: J. O'Rourke, Computational Geometry Column 31,
+Internat. J. Comput. Geom. Appl. 7(4) 379--382 (1997); 
+also in SIGACT News, 28(2):20--23 (1997), Issue 103.
+
+Written by Joseph O'Rourke and Min Xu, June 1997.
+Used in the textbook, ""Computational Geometry in C.""
+Questions to orourke@cs.smith.edu.
+--------------------------------------------------------------------
+This code is Copyright 1997 by Joseph O'Rourke.  It may be freely
+redistributed in its entirety provided that this copyright notice is
+not removed.
+--------------------------------------------------------------------: e
+"
+"MAX_INT is the range of random(): 2^{31}-1","","MAX_INT is the range of random(): 2^{31}-1 : d
+"
+"Test for flags","","Test for flags : o
+"
+"Test for radius flag","","Test for radius flag : o
+"
+"Test whether user wants floating point output","","Test whether user wants floating point output : o
+"
+"Test for ellipsoid radius if any","","Test for ellipsoid radius if any : o
+"
+"number of points","","number of points : d
+"
+"default radius","","default radius : d
+"
+"true radius","","true radius : d
+"
+"ellipsoid axis lengths","","ellipsoid axis lengths : d
+"
+"Generate a random point on a sphere of radius 1.","","Generate a random point on a sphere of radius 1. : o
+"
+"the sphere is sliced at z, and a random point at angle t
+       generated on the circle of intersection.","","the sphere is sliced at z, and a random point at angle t : d
+       generated on the circle of intersection. : o
+"
