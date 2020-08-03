@@ -1,0 +1,116 @@
+Filename$Comment text$Start line$End line$No. of words$Program Domain Concepts$Problem Domain Concepts$Copyright/License$Bug/Fix/Patch/Version$Build$System spec$Authorship$Email$Date$Todo$Junk$C1$C2$C3$C4$C5$C6$C7$C8$C9$C10$C11$C12$C13$C14$C15$C16$C17$C18$C19$C20$C21$C22$C23$C24$C25$C26$C27$C28$C29$C30
+googletest/googletest/src/gtest-all.cc/gtest-all.cc$"Copyright 2008, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+* Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."$1$28$222${'rights': ['right', 'Data-Structure and its Components'], 'binary': ['binari', 'Operations as part of Algorithms'], 'modification': ['modif', 'Operations as part of Algorithms'], 'list': ['list', 'Data-Structure and its Components'], 'distribution': ['distribut', 'Operations as part of Algorithms'], 'derived': ['decided', 'Operations as part of Algorithms'], 'including': ['includ', 'Operations as part of Algorithms'], 'for': ['for', 'Operations as part of Algorithms'], 'direct': ['direct', 'Properties of Datastructure / Function / Blocks'], 'indirect': ['indirect', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'substitute': ['substitut', 'Operations as part of Data structure'], 'data': ['data', 'Data-Structure and its Components'], 'interruption': ['interrupt', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'contract': ['contract', 'Operations as part of Data structure'], 'out': ['out', 'Properties of Datastructure / Function / Blocks'], 'if': ['if', 'Operations as part of Algorithms'], 'modification,': ['modification', 'Operations as part of Algorithms'], 'retain': ['remaind', 'Operations as part of Data structure'], 'distribution.': ['distributing', 'Operations as part of Algorithms'], 'written': ['write', 'Operations as part of Data structure'], 'including,': ['including', 'Operations as part of Algorithms'], 'direct,': ['direct', 'Properties of Datastructure / Function / Blocks'], 'indirect,': ['indirect', 'Time Complexity / Space Complexity/ Memory/ Exception'], '(including,': ['including', 'Operations as part of Algorithms'], 'caused': ['case', 'Operations as part of Algorithms'], 'contract,': ['contract', 'Operations as part of Data structure'], 'strict': ['struct', 'Data-Structure and its Components'], '(including': ['including', 'Operations as part of Algorithms'], 'by the': ['byte', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'in any': ['in rang', 'Properties of Datastructure / Function / Blocks'], 'out of': ['outcom', 'Data-Structure and its Components']}$['event', 'google']$True$False$False$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$1$$$$$$$$$$$$$$
+googletest/googletest/src/gtest-all.cc/gtest-all.cc$"
+Google C++ Testing and Mocking Framework (Google Test)
+
+Sometimes it's desirable to build Google Test by compiling a single file.
+This file serves this purpose."$30$34$25${'testing': ['reseting', 'Operations as part of Algorithms'], 'mocking': ['moving', 'Operations as part of Algorithms'], 'compiling': ['comparing', 'Operations as part of Algorithms'], 'single': ['sine', 'Interpolation/Extrapolation/Numerical/Linear Algebra'], 'serves': ['merges', 'Operations as part of Data structure']}$['file', 'mock', 'google', 'test']$False$False$True$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$$$$$$$1$$$$$$$$
+googletest/googletest/src/gtest-all.cc/gtest-all.cc$"This line ensures that gtest.h can be compiled on its own, even
+when it's fused."$36$37$15${'ensures': ['enquires', 'Operations as part of Algorithms'], 'compiled': ['composed', 'Operations as part of Algorithms']}$['gtest', 'test']$False$False$False$False$False$False$False$False$False$$$$$$$$1$$$1$$$$$$$$$$$$$$$$$$$
+googletest/googletest/src/gtest-all.cc/gtest-all.cc$The following lines pull in the real gtest *.cc files.$40$40$10${'real': ['real', 'Data-Structure and its Components']}$['files', 'file', 'gtest', 'test']$False$False$False$False$False$False$False$False$False$$$$$$$$1$$$1$$$$$$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock-all.cc/gmock-all.cc$"Copyright 2008, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+* Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."$1$28$222${'rights': ['right', 'Data-Structure and its Components'], 'binary': ['binari', 'Operations as part of Algorithms'], 'modification': ['modif', 'Operations as part of Algorithms'], 'list': ['list', 'Data-Structure and its Components'], 'distribution': ['distribut', 'Operations as part of Algorithms'], 'derived': ['decided', 'Operations as part of Algorithms'], 'including': ['includ', 'Operations as part of Algorithms'], 'for': ['for', 'Operations as part of Algorithms'], 'direct': ['direct', 'Properties of Datastructure / Function / Blocks'], 'indirect': ['indirect', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'substitute': ['substitut', 'Operations as part of Data structure'], 'data': ['data', 'Data-Structure and its Components'], 'interruption': ['interrupt', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'contract': ['contract', 'Operations as part of Data structure'], 'out': ['out', 'Properties of Datastructure / Function / Blocks'], 'if': ['if', 'Operations as part of Algorithms'], 'modification,': ['modification', 'Operations as part of Algorithms'], 'retain': ['remaind', 'Operations as part of Data structure'], 'distribution.': ['distributing', 'Operations as part of Algorithms'], 'written': ['write', 'Operations as part of Data structure'], 'including,': ['including', 'Operations as part of Algorithms'], 'direct,': ['direct', 'Properties of Datastructure / Function / Blocks'], 'indirect,': ['indirect', 'Time Complexity / Space Complexity/ Memory/ Exception'], '(including,': ['including', 'Operations as part of Algorithms'], 'caused': ['case', 'Operations as part of Algorithms'], 'contract,': ['contract', 'Operations as part of Data structure'], 'strict': ['struct', 'Data-Structure and its Components'], '(including': ['including', 'Operations as part of Algorithms'], 'by the': ['byte', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'in any': ['in rang', 'Properties of Datastructure / Function / Blocks'], 'out of': ['outcom', 'Data-Structure and its Components']}$['event', 'google']$True$False$False$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$1$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock-all.cc/gmock-all.cc$"
+Google C++ Mocking Framework (Google Mock)
+
+This file #includes all Google Mock implementation .cc files.  The
+purpose is to allow a user to build Google Mock by compiling this
+file alone."$30$35$31${'mocking': ['moving', 'Operations as part of Algorithms'], '#includes': ['includes', 'Operations as part of Algorithms'], 'implementation': ['complementation', 'Operations as part of Data structure'], 'compiling': ['comparing', 'Operations as part of Algorithms'], 'alone.': ['clone', 'Operations as part of Algorithms']}$['files', 'file', 'mock', 'google']$False$False$True$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$$$$$$$1$$$$$$$$
+googletest/googlemock/src/gmock-all.cc/gmock-all.cc$"This line ensures that gmock.h can be compiled on its own, even
+when it's fused."$37$38$15${'ensures': ['enquires', 'Operations as part of Algorithms'], 'compiled': ['composed', 'Operations as part of Algorithms']}$['mock']$False$False$False$False$False$False$False$False$False$$$$$$$$1$$1$$$$$$$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock-all.cc/gmock-all.cc$The following lines pull in the real gmock *.cc files.$41$41$10${'real': ['real', 'Data-Structure and its Components']}$['files', 'file', 'mock']$False$False$False$False$False$False$False$False$False$$$$$$$$1$$$1$$$$$$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock_main.cc/gmock_main.cc$"Copyright 2008, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+* Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."$1$28$222${'rights': ['right', 'Data-Structure and its Components'], 'binary': ['binari', 'Operations as part of Algorithms'], 'modification': ['modif', 'Operations as part of Algorithms'], 'list': ['list', 'Data-Structure and its Components'], 'distribution': ['distribut', 'Operations as part of Algorithms'], 'derived': ['decided', 'Operations as part of Algorithms'], 'including': ['includ', 'Operations as part of Algorithms'], 'for': ['for', 'Operations as part of Algorithms'], 'direct': ['direct', 'Properties of Datastructure / Function / Blocks'], 'indirect': ['indirect', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'substitute': ['substitut', 'Operations as part of Data structure'], 'data': ['data', 'Data-Structure and its Components'], 'interruption': ['interrupt', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'contract': ['contract', 'Operations as part of Data structure'], 'out': ['out', 'Properties of Datastructure / Function / Blocks'], 'if': ['if', 'Operations as part of Algorithms'], 'modification,': ['modification', 'Operations as part of Algorithms'], 'retain': ['remaind', 'Operations as part of Data structure'], 'distribution.': ['distributing', 'Operations as part of Algorithms'], 'written': ['write', 'Operations as part of Data structure'], 'including,': ['including', 'Operations as part of Algorithms'], 'direct,': ['direct', 'Properties of Datastructure / Function / Blocks'], 'indirect,': ['indirect', 'Time Complexity / Space Complexity/ Memory/ Exception'], '(including,': ['including', 'Operations as part of Algorithms'], 'caused': ['case', 'Operations as part of Algorithms'], 'contract,': ['contract', 'Operations as part of Data structure'], 'strict': ['struct', 'Data-Structure and its Components'], '(including': ['including', 'Operations as part of Algorithms'], 'by the': ['byte', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'in any': ['in rang', 'Properties of Datastructure / Function / Blocks'], 'out of': ['outcom', 'Data-Structure and its Components']}$['event', 'google']$True$False$False$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$1$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock_main.cc/gmock_main.cc$"Since Google Mock depends on Google Test, InitGoogleMock() is
+also responsible for initializing Google Test.  Therefore there's
+no need for calling testing::InitGoogleTest() separately."$40$42$23${'for': ['for', 'Operations as part of Algorithms'], 'initializing': ['initialising', 'Operations as part of Algorithms'], 'separately': ['separ', 'Operations as part of Algorithms'], 'depends': ['appends', 'Operations as part of Algorithms']}$['mock', 'google', 'test']$False$False$False$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock_main.cc/gmock_main.cc$"MS C++ compiler/linker has a bug on Windows (not on Windows CE), which
+causes a link error when _tmain is defined in a static library and UNICODE
+is enabled. For this reason instead of _tmain, main function is used on
+Windows. See the following link to track the current status of this bug:
+https://web.archive.org/web/20170912203238/connect.microsoft.com/VisualStudio/feedback/details/394464/wmain-link-error-in-the-static-library
+// NOLINT"$52$57$56${'bug': ['bug', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'link': ['link', 'Properties of Datastructure / Function / Blocks'], 'error': ['error', 'Time Complexity / Space Complexity/ Memory/ Exception'], 'static': ['static', 'Properties of Datastructure / Function / Blocks'], 'for': ['for', 'Operations as part of Algorithms'], 'causes': ['case', 'Operations as part of Algorithms'], '_tmain': ['domain', 'Data-Structure and its Components'], 'defined': ['decided', 'Operations as part of Algorithms'], 'function': ['functor', 'Properties of Datastructure / Function / Blocks'], 'current': ['recurrent', 'Properties of Datastructure / Function / Blocks'], 'status': ['starts', 'Operations as part of Algorithms'], 'a link': ['link', 'Properties of Datastructure / Function / Blocks'], 'a static': ['static', 'Properties of Datastructure / Function / Blocks']}$['error', 'current', 'linker', 'compiler', 'bug', 'microsoft', 'windows', 'static', 'library', 'unicode']$False$True$False$True$False$False$False$False$False$$$$$$$$$1$$1$$$$$$$$$1$$$$$$$1$$$
+googletest/googlemock/src/gmock_main.cc/gmock_main.cc$NOLINT$59$59$1${}$[]$False$False$False$False$False$False$False$False$False$$$$$$1$1$$$$$$1$$$$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock_main.cc/gmock_main.cc$GTEST_OS_WINDOWS_MOBILE$64$64$1${}$['mobile', 'gtest', 'windows', 'test']$False$False$False$False$False$False$False$False$False$$$$$$1$$$$$1$$1$$$$$$$$$$$$$$$$$
+googletest/googlemock/src/gmock_main.cc/gmock_main.cc$"Since Google Mock depends on Google Test, InitGoogleMock() is
+also responsible for initializing Google Test.  Therefore there's
+no need for calling testing::InitGoogleTest() separately."$66$68$23${'for': ['for', 'Operations as part of Algorithms'], 'initializing': ['initialising', 'Operations as part of Algorithms'], 'separately': ['separ', 'Operations as part of Algorithms'], 'depends': ['appends', 'Operations as part of Algorithms']}$['mock', 'google', 'test']$False$False$False$False$False$False$False$False$False$$$$$$$$$1$$1$$$$$$$$$$$$$$$$$$$
