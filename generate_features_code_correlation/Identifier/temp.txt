@@ -1,0 +1,64 @@
+add.c
+merge_add_c
+Yes, working well
+
+Text:  merge_add_c
+('Prog toks:', ['merge', 'add'])
+
+('Prob Toks:', [])
+
+Text:  arr
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  l
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  m
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  r
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  i
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  j
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  k
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  n1
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  n2
+('Prog toks:', [])
+
+('Prob Toks:', [])
+
+Text:  updates
+('Prog toks:', ['updates'])
+
+('Prob Toks:', [])
+
+Text:  space
+('Prog toks:', ['space'])
+
+('Prob Toks:', [])
+[('', '4', '55', 2466, 'merge', 1), ('', '4', '55', 2473, 'add', 1), ('updates', '11', '11', 47, 'updates', 1), ('space', '11', '11', 884, 'space', 1)]
